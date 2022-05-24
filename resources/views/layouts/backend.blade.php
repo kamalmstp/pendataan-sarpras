@@ -23,6 +23,7 @@
   @yield('css_before')
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap">
   <link rel="stylesheet" id="css-main" href="{{ mix('css/dashmix.css') }}">
+  <link rel="stylesheet" id="css-main" href="fontawesome/css/all.css">
 
   <!-- You can include a specific file from public/css/themes/ folder to alter the default color theme of the template. eg: -->
   <!-- <link rel="stylesheet" id="css-theme" href="{{ mix('css/themes/xwork.css') }}"> -->
@@ -323,6 +324,27 @@
                 <span class="nav-main-link-badge badge rounded-pill bg-primary">5</span>
               </a>
             </li>
+            <li class="nav-main-item">
+              <a class="nav-main-link{{ request()->is('data-sekolah') ? ' active' : '' }}" href="/data-sekolah">
+                <i class="nav-main-link-icon fa-solid fa-school"></i>
+                <span class="nav-main-link-name">Data Sekolah</span>
+                <!-- <span class="nav-main-link-badge badge rounded-pill bg-primary">5</span> -->
+              </a>
+            </li>
+            <li class="nav-main-item">
+              <a class="nav-main-link{{ request()->is('rukel') ? ' active' : '' }}" href="#">
+                <i class="nav-main-link-icon fa-solid fa-door-open"></i>
+                <span class="nav-main-link-name">Data Ruang</span>
+                <!-- <span class="nav-main-link-badge badge rounded-pill bg-primary">5</span> -->
+              </a>
+            </li>
+            <li class="nav-main-item">
+              <a class="nav-main-link{{ request()->is('sarpras') ? ' active' : '' }}" href="#">
+                <i class="nav-main-link-icon fa-solid fa-scissors"></i>
+                <span class="nav-main-link-name">Sarana Prasarana</span>
+                <!-- <span class="nav-main-link-badge badge rounded-pill bg-primary">5</span> -->
+              </a>
+            </li>
             <li class="nav-main-heading">Various</li>
             <li class="nav-main-item{{ request()->is('pages/*') ? ' open' : '' }}">
               <a class="nav-main-link nav-main-link-submenu" data-toggle="submenu" aria-haspopup="true" aria-expanded="true" href="#">
@@ -577,6 +599,8 @@
   <!-- <script src="{{ mix('/js/laravel.app.js') }}"></script> -->
 
   @yield('js_after')
+  
+  @include('sweetalert::alert')
 </body>
 
 </html>
