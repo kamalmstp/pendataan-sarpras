@@ -12,8 +12,10 @@ class sekolah extends Model
     protected $primaryKey = "id";
     protected $fillable = [
         'id',
+        'tingkat',
         'nama_sekolah',
         'alamat',
+        'kelurahan',
         'kecamatan',
         'nama_kepsek',
         'no_sekolah_kepsek',
@@ -23,6 +25,7 @@ class sekolah extends Model
         'nss',
         'luas_tanah',
         'luas_bangunan',
+        'status_tanah',
         'jumlah_rombel',
         'status'
     ];

@@ -13,6 +13,7 @@
 
   <!-- CSRF Token -->
   <meta name="csrf-token" content="{{ csrf_token() }}">
+  <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
 
   <!-- Icons -->
   <link rel="shortcut icon" href="{{ asset('favicon.png') }}">
@@ -23,7 +24,7 @@
   @yield('css_before')
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap">
   <link rel="stylesheet" id="css-main" href="{{ mix('css/dashmix.css') }}">
-  <link rel="stylesheet" id="css-main" href="fontawesome/css/all.css">
+  <link rel="stylesheet" id="css-main" href="{{ asset('css/style.css') }}">
   
 
   <!-- You can include a specific file from public/css/themes/ folder to alter the default color theme of the template. eg: -->
@@ -49,14 +50,24 @@
 
     @include('partials.footer')
   </div>
+  @yield('modal')
   <!-- Dashmix Core JS -->
   <script src="{{ mix('js/dashmix.app.js') }}"></script>
   <script src="{{ asset('js/plugins/sweetalert2/sweetalert2.min.js') }}"></script>
   <script src="{{ asset('js/confirm.js') }}"></script>
 
   @yield('js_after')
-  
   @include('sweetalert::alert')
+  @if(session()->has('message'))
+    <script type="text/javascript">
+        Swal.fire({
+            title: '{{ ucwords(session()->get('message.type')) }}',
+            text: '{{ session()->get('message.text') }}',
+            icon: '{{ session()->get('message.type') }}',
+            timer: {{ session()->has('message.timer') ? session()->get('message.timer') : 2000 }}
+        });
+    </script>
+  @endif
 </body>
 
 </html>

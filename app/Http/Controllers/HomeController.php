@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\ruang_kelas;
 use App\Models\User;
 
 class HomeController extends Controller
@@ -20,7 +21,9 @@ class HomeController extends Controller
         }
 
         if (auth()->user()->level === User::SD) {
-            return view('primary.dashboard');
+            $id = auth()->user()->id_sekolah;
+            $kelas = ruang_kelas::where('id', $id)->count();
+            return view('primary.dashboard', compact('kelas'));
         }
         if (auth()->user()->level === User::SMP) {
             return view('junior.dashboard');

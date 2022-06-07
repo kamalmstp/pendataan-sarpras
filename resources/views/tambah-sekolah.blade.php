@@ -54,7 +54,7 @@
 
       <!-- TABEL INPUT OK -->
 
-      <h2 class="content-heading">Data Sekolah</h2>
+        <h2 class="content-heading">Data Sekolah</h2>
         <div class="row">
           <div class="col-lg-3">
             <p class="text-muted">
@@ -123,7 +123,7 @@
 
 
             <!-- Mulai Data Kondisi Ruang Kelas-->
-      <h2 class="content-heading">Data Kondisi Ruang Kelas</h2>
+        <h2 class="content-heading">Data Kondisi Ruang Kelas</h2>
             <div class="col-lg-3">
               <p class="text-muted">
                 Masukan Data Kondisi Ruang Kelas
@@ -211,11 +211,8 @@
 
             <!-- </div> -->
             </div>
-<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7 /jquery.min.js"></script> -->
-      
-      
           <!-- Mulai Data Ruang / Area Penunjang Lain -->
-      <h2 class="content-heading">Data Ruang / Area Penunjang Lain</h2>
+          <h2 class="content-heading">Data Ruang / Area Penunjang Lain</h2>
             <div class="col-lg-3">
               <p class="text-muted">
                 Masukan Data Ruang / Area Penunjang Lain
