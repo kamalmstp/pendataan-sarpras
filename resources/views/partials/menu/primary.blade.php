@@ -23,13 +23,13 @@
                 </a>
             </li>
             <li class="nav-main-item">
-                <a class="nav-main-link{{ request()->is('penunjang') ? ' active' : '' }}" href="#">
+                <a class="nav-main-link{{ request()->is('primary/pendataan/penunjang*') ? ' active' : '' }}" href="{{route('penunjang.index')}}">
                 <i class="nav-main-link-icon fa fa-home"></i>
                 <span class="nav-main-link-name">Ruang Penunjang</span>
                 </a>
             </li>
             <li class="nav-main-item">
-                <a class="nav-main-link{{ request()->is('sarpras') ? ' active' : '' }}" href="#">
+                <a class="nav-main-link{{ request()->is('primary/pendataan/sanitasi*') ? ' active' : '' }}" href="{{route('sanitasi.index')}}">
                 <i class="nav-main-link-icon fa fa-hands-wash"></i>
                 <span class="nav-main-link-name">Sarpras Sanitasi</span>
                 </a>
