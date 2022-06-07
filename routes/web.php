@@ -18,10 +18,10 @@ use App\Http\Controllers\HomeController;
 */
 
 // Example Routes
-Route::view('/', 'landing');
-Route::match(['get', 'post'], '/dashboard', function(){
-    return view('dashboard');
-});
+// Route::view('/', 'landing');
+// Route::match(['get', 'post'], '/dashboard', function(){
+//     return view('dashboard');
+// });
 Route::view('/pages/slick', 'pages.slick');
 Route::view('/pages/datatables', 'pages.datatables');
 Route::view('/pages/blank', 'pages.blank');
@@ -36,3 +36,14 @@ Route::post('/simpan-sekolah', 'App\Http\Controllers\SekolahController@store');
 Route::get('/edit-sekolah/{id}', 'App\Http\Controllers\SekolahController@edit');
 Route::post('/update-sekolah/{id}', 'App\Http\Controllers\SekolahController@update');
 Route::get('/delete-sekolah/{id}', 'App\Http\Controllers\SekolahController@destroy');
+
+Route::middleware(['auth'])->group(function () {
+    Route::get('/dashboard', [HomeController::class, 'index'])->name('dashboard');
+    Route::get('/home', [HomeController::class, 'index'])->name('home');
+
+    include_once('administrator.php');
+
+    include_once('primary.php');
+
+    include_once('junior.php');
+});

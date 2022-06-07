@@ -25,8 +25,6 @@ class CreateUsersTable extends Migration
             ])->default('ADMIN');
             $table->rememberToken();
             $table->timestamps();
-
-            $table->primary('id');
         });
     }
 

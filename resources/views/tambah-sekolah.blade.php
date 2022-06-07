@@ -114,8 +114,8 @@
                 <label class="form-label" for="example-text-input-floating">Jumlah Rombel</label>
               </div>
               <div class="form-floating mb-4">
-                <input type="text" id="status" name="status_rombel" class="form-control" placeholder="Status Rombel">
-                <label class="form-label" for="example-text-input-floating">Status Rombel</label>
+                <input type="text" id="status" name="status" class="form-control" placeholder="Status">
+                <label class="form-label" for="example-text-input-floating">Status</label>
               </div>
             </div>
           <!-- </div> -->

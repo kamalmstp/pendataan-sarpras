@@ -44,7 +44,7 @@ class SekolahController extends Controller
      */
     public function store(Request $request)
     {
-        dd($request->all());
+        // dd($request->all());
         
         $data = $request->all();
 
@@ -61,15 +61,15 @@ class SekolahController extends Controller
             $sekolah -> luas_tanah = $data ['luas_tanah'];
             $sekolah -> luas_bangunan = $data ['luas_bangunan'];
             $sekolah -> jumlah_rombel = $data ['jumlah_rombel'];
-            $sekolah -> status_rombel = $data ['status_rombel'];
+            $sekolah -> status = $data ['status'];
         $sekolah -> save();
 
         $ruang_kelas = new ruang_kelas;
             $ruang_kelas -> id_sekolah	 = $sekolah->id;
-            $ruang_kelas -> jenis_rungkel = $data['jenis_rungkel'];
-            $ruang_kelas -> panjang_rungkel = $data['panjang_rungkel'];
-            $ruang_kelas -> lebar_rungkel = $data['lebar_rungkel'];
-            $ruang_kelas -> kondisi_rungkel = $data['kondisi_rungkel'];
+            $ruang_kelas -> jenis_ruang = $data['jenis_rungkel'];
+            $ruang_kelas -> panjang = $data['panjang_rungkel'];
+            $ruang_kelas -> lebar = $data['lebar_rungkel'];
+            $ruang_kelas -> kondisi = $data['kondisi_rungkel'];
             $ruang_kelas -> tingkat_rusak = $data['tingkat_rusak'];
             $ruang_kelas -> rehab_akhir = $data['rehab_akhir'];
             $ruang_kelas -> meja_baik = $data['meja_baik'];

@@ -35,7 +35,6 @@ class LoginController extends Controller
         $request->validate([
             $this->username() => 'required|string',
             'password' => 'required|string',
-            // 'g-recaptcha-response' => 'required|captcha'
         ]);
     }
 
@@ -59,13 +58,11 @@ class LoginController extends Controller
     {
         $redirectPath = RouteServiceProvider::HOME;
 
-        if (auth()->user()->level === User::STUDENT) {
-            $redirectPath = route('student.index');
-        } else if (auth()->user()->level === User::STUDY_PROGRAM_LEADER) {
-            $redirectPath = route('leader.index');
-        } else if (auth()->user()->level === User::LECTURER) {
-            $redirectPath = route('lecturer.index');
-        } else if (auth()->user()->level === User::ADMINISTRATOR) {
+        if (auth()->user()->level === User::SD) {
+            $redirectPath = route('primary.index');
+        } else if (auth()->user()->level === User::SMP) {
+            $redirectPath = route('junior.index');
+        } else if (auth()->user()->level === User::ADMIN) {
             $redirectPath = route('administrator.index');
         }
 

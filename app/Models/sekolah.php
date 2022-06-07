@@ -24,6 +24,6 @@ class sekolah extends Model
         'luas_tanah',
         'luas_bangunan',
         'jumlah_rombel',
-        'status_rombel'
+        'status'
     ];
 }
