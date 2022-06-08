@@ -53,7 +53,7 @@
                 </a>
             </li>
             <li class="nav-main-item">
-                <a class="nav-main-link{{ request()->is('sarpras') ? ' active' : '' }}" href="#">
+                <a class="nav-main-link{{ request()->is('primary/pendataan/jumlah*') ? ' active' : '' }}" href="{{route('jumlah.index')}}">
                 <i class="nav-main-link-icon fa fa-users"></i>
                 <span class="nav-main-link-name">Jumlah Siswa & Guru</span>
                 </a>
