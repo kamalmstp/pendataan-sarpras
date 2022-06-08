@@ -35,13 +35,13 @@
                 </a>
             </li>
             <li class="nav-main-item">
-                <a class="nav-main-link{{ request()->is('perpustakaan') ? ' active' : '' }}" href="#">
+                <a class="nav-main-link{{ request()->is('primary/pendataan/perpus*') ? ' active' : '' }}" href="{{route('perpus.index')}}">
                 <i class="nav-main-link-icon fa fa-book"></i>
                 <span class="nav-main-link-name">Perpustakaan</span>
                 </a>
             </li>
             <li class="nav-main-item">
-                <a class="nav-main-link{{ request()->is('peralatan') ? ' active' : '' }}" href="#">
+                <a class="nav-main-link{{ request()->is('primary/pendataan/peralatan*') ? ' active' : '' }}" href="{{route('peralatan.index')}}">
                 <i class="nav-main-link-icon fa fa-toolbox"></i>
                 <span class="nav-main-link-name">Peralatan Pendidikan</span>
                 </a>
