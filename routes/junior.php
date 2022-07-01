@@ -9,5 +9,5 @@ use App\Models\User;
 Route::middleware('role:' . User::SMP)
     ->prefix('junior')
     ->group(function () {
-        Route::get('/', [HomeController::class, 'index'])->name('junior.index');
+        Route::get('/dashboard', [HomeController::class, 'index'])->name('junior.index');
     });

@@ -13,7 +13,7 @@ use App\Models\User;
 Route::middleware('role:' . User::SD)
     ->prefix('primary')
     ->group(function () {
-        Route::get('/', [HomeController::class, 'index'])->name('primary.index');
+        Route::get('/dashboard', [HomeController::class, 'index'])->name('primary.index');
 
         Route::group([
             'prefix' => 'pendataan',

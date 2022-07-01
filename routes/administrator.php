@@ -9,7 +9,7 @@ use App\Models\User;
 Route::middleware('role:' . User::ADMIN)
     ->prefix('administrator')
     ->group(function () {
-        Route::get('/', [HomeController::class, 'index'])->name('administrator.index');
+        Route::get('/dashboard', [HomeController::class, 'index'])->name('administrator.index');
 
         // PENDATAAN
         Route::group([
