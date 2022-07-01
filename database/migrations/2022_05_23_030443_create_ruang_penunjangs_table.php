@@ -22,6 +22,15 @@ class CreateRuangPenunjangsTable extends Migration
             $table->string('lebar',100);
             $table->string('kondisi',200);
         });
+        Schema::create('peralatan', function (Blueprint $table) {
+            $table->id();
+            // $table->timestamps();
+            $table->string('nama_peralatan',150);
+            $table->integer('jumlah');
+            $table->integer('tahun_peroleh');
+            $table->string('sumber_dana',200);
+            $table->string('kondisi',200);
+        });
     }
 
     /**
