@@ -19,7 +19,7 @@ class SekolahController extends Controller
     public function index()
     {
         //
-        $dtsekolah = sekolah::leftJoin('users', 'users.id_sekolah', '=', 'sekolah.id')->select('sekolah.*', 'users.id_sekolah')->get();
+        $dtsekolah = Sekolah::leftJoin('users', 'users.id_sekolah', '=', 'sekolah.id')->select('sekolah.*', 'users.id_sekolah')->get();
         // $dtsekolah = sekolah::all();
         // dd($dtsekolah);
         return view('administrator.sekolah.index', compact('dtsekolah'));
@@ -91,7 +91,7 @@ class SekolahController extends Controller
             'jumlah_rombel' => $request->get('jumlah_rombel'),
             'status' => $request->get('status'),
         ];
-        $insert = sekolah::create($data);
+        $insert = Sekolah::create($data);
 
         if($insert) {
             $message = setFlashMessage('success', 'insert', 'Data Sekolah');

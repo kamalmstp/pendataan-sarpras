@@ -91,8 +91,7 @@
 
         'sidebar-dark page-header-dark dark-mode'   Enable dark mode (light sidebar/header is not supported with dark mode)
     -->
-    <!-- <div id="page-container" class="page-header-dark main-content-boxed"> -->
-    <div id="page-container" class="enable-page-overlay page-header-fixed main-content-narrow">
+    <div id="page-container" class="page-header-dark main-content-boxed">
 
       <!-- Header -->
       <header id="page-header">
@@ -109,14 +108,97 @@
           </div>
           <!-- END Left Section -->
 
-          <!-- Menu Header -->
+          <!-- Right Section -->
           <div>
-            <a href="{{route('login')}}" type="button" class="btn rounded-pill btn-primary ms-2">
-              <i class="fa fa-sign-in-alt"></i> Login
-            </a>
+            <!-- Open Search Section -->
+            <!-- Layout API, functionality initialized in Template._uiApiLayout() -->
+            <button type="button" class="btn btn-alt-secondary ms-2" data-toggle="layout" data-action="header_search_on">
+              <i class="fa fa-search"></i>
+            </button>
+            <!-- END Open Search Section -->
+
+            <!-- User Dropdown -->
+            <div class="dropdown d-inline-block">
+              <button type="button" class="btn btn-alt-secondary" id="page-header-user-dropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="fa fa-user-circle"></i>
+                <i class="fa fa-angle-down opacity-50 ms-1"></i>
+              </button>
+              <div class="dropdown-menu dropdown-menu-lg dropdown-menu-end p-0" aria-labelledby="page-header-user-dropdown">
+                <div class="rounded-top fw-semibold text-white bg-image" style="background-image: url({{asset('media/photos/photo20.jpg')}});">
+                  <div class="p-3 bg-black-50 rounded-top">
+                    <div class="d-flex align-items-center">
+                      <img class="img-avatar img-avatar48 img-avatar-thumb" src="{{asset('media/avatars/avatar3.jpg')}}" alt="">
+                      <div class="ms-3">
+                        <a class="text-white fw-semibold" href="be_pages_generic_profile.html">Carol Ray</a>
+                        <div class="fs-sm text-white-75">c.ray@example.com</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="p-2">
+                  <a class="dropdown-item d-flex justify-content-between align-items-center" href="javascript:void(0)">
+                    <div>
+                      <i class="fa fa-fw fa-globe opacity-50 me-1"></i>
+                      Projects
+                    </div>
+                    <span class="badge rounded-pill bg-primary">3</span>
+                  </a>
+                  <a class="dropdown-item d-flex justify-content-between align-items-center" href="javascript:void(0)">
+                    <div>
+                      <i class="fa fa-fw fa-sync-alt opacity-50 me-1"></i>
+                      Servers
+                    </div>
+                    <span class="badge rounded-pill bg-primary">1</span>
+                  </a>
+                  <a class="dropdown-item d-flex justify-content-between align-items-center" href="javascript:void(0)">
+                    <div>
+                      <i class="fa fa-fw fa-users opacity-50 me-1"></i>
+                      Customers
+                    </div>
+                    <span class="badge rounded-pill bg-primary">15</span>
+                  </a>
+                  <div role="separator" class="dropdown-divider"></div>
+                  <a class="dropdown-item d-flex align-items-center" href="javascript:void(0)">
+                    <i class="fa fa-fw fa-user-circle opacity-50 me-1"></i>
+                    Profile
+                  </a>
+                  <a class="dropdown-item d-flex align-items-center" href="javascript:void(0)">
+                    <i class="fab fa-fw fa-paypal opacity-50 me-1"></i>
+                    Billing
+                  </a>
+                  <a class="dropdown-item d-flex align-items-center" href="javascript:void(0)">
+                    <i class="fa fa-fw fa-wrench opacity-50 me-1"></i>
+                    Preferences
+                  </a>
+                  <div role="separator" class="dropdown-divider"></div>
+                  <a class="dropdown-item d-flex align-items-center mb-0" href="op_auth_signin.html">
+                    <i class="fa fa-fw fa-sign-out-alt text-danger me-1"></i>
+                    Log Out
+                  </a>
+                </div>
+              </div>
+            </div>
+            <!-- END User Dropdown -->
           </div>
-          <!-- END Menu Header -->
+          <!-- END Right Section -->
         </div>
+        <!-- END Header Content -->
+
+        <!-- Header Search -->
+        <div id="page-header-search" class="overlay-header bg-sidebar-dark">
+          <div class="content-header">
+            <form class="w-100" action="bd_search.html" method="POST">
+              <div class="input-group">
+                <input type="text" class="form-control" placeholder="Search your projects.." id="page-header-search-input" name="page-header-search-input">
+                <!-- Layout API, functionality initialized in Template._uiApiLayout() -->
+                <button type="button" class="btn btn-alt-danger" data-toggle="layout" data-action="header_search_off">
+                  <i class="fa fa-fw fa-times-circle"></i>
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+        <!-- END Header Search -->
 
         <!-- Header Loader -->
         <!-- Please check out the Loaders page under Components category to see examples of showing/hiding it -->
@@ -133,17 +215,6 @@
 
       <!-- Main Container -->
       <main id="main-container">
-
-        <div class="bg-image" style="background-image: url({{asset('media/photos/photo15@2x.jpg')}});">
-          <div class="bg-primary-dark-op">
-            <div class="content content-full">
-              <div class="py-3 text-center">
-                <h1 class="text-white mb-2">Get Started</h1>
-                <h2 class="h4 fw-normal text-white-75 mb-0">Let us show you how to start building!</h2>
-              </div>
-            </div>
-          </div>
-        </div>
 
         <!-- Navigation -->
         <div class="bg-sidebar-dark">

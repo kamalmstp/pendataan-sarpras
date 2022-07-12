@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 08, 2022 at 09:08 AM
+-- Generation Time: Jul 12, 2022 at 04:21 AM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 7.4.29
 
@@ -200,7 +200,11 @@ CREATE TABLE `sekolah` (
   `luas_tanah` int(11) DEFAULT NULL,
   `luas_bangunan` int(11) DEFAULT NULL,
   `status_tanah` varchar(50) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `kurikulum` varchar(50) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `penyelenggaraan` varchar(100) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `status` varchar(100) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `latitude` varchar(100) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `longitude` varchar(100) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `jumlah_rombel` int(5) DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
@@ -210,9 +214,9 @@ CREATE TABLE `sekolah` (
 -- Dumping data for table `sekolah`
 --
 
-INSERT INTO `sekolah` (`id`, `tingkat`, `nama_sekolah`, `alamat`, `kecamatan`, `kelurahan`, `nama_kepsek`, `no_sekolah_kepsek`, `akredetasi`, `no_akredetasi`, `npsn`, `nss`, `luas_tanah`, `luas_bangunan`, `status_tanah`, `status`, `jumlah_rombel`, `created_at`, `updated_at`) VALUES
-(1, 'SD', 'SD Negeri 1 Rantau Buda', 'Jl. Rantau Jaya Km.13, Kelurahan Rantau Jaya', 'Sungai Durian', NULL, NULL, NULL, NULL, NULL, 30303473, NULL, NULL, NULL, NULL, 'Negeri', NULL, '2022-06-06 16:21:41', '2022-06-07 07:11:51'),
-(3, 'SD', 'SD Negeri 3 Rantau Buda', 'Jl. Transmigrasi Km 09 Terombo', 'Sungai Durian', 'Terombong Sari', NULL, NULL, NULL, NULL, 30303485, NULL, NULL, NULL, NULL, 'Negeri', NULL, NULL, NULL);
+INSERT INTO `sekolah` (`id`, `tingkat`, `nama_sekolah`, `alamat`, `kecamatan`, `kelurahan`, `nama_kepsek`, `no_sekolah_kepsek`, `akredetasi`, `no_akredetasi`, `npsn`, `nss`, `luas_tanah`, `luas_bangunan`, `status_tanah`, `kurikulum`, `penyelenggaraan`, `status`, `latitude`, `longitude`, `jumlah_rombel`, `created_at`, `updated_at`) VALUES
+(1, 'SD', 'SD Negeri 1 Rantau Buda', 'Jl. Rantau Jaya Km.13, Kelurahan Rantau Jaya', 'Sungai Durian', NULL, NULL, NULL, NULL, NULL, 30303473, NULL, NULL, NULL, NULL, NULL, NULL, 'Negeri', '-3.0230741', '114.773644', NULL, '2022-06-06 16:21:41', '2022-07-10 20:08:10'),
+(3, 'SD', 'SD Negeri 3 Rantau Buda', 'Jl. Transmigrasi Km 09 Terombo', 'Sungai Durian', 'Terombong Sari', NULL, NULL, NULL, NULL, 30303485, NULL, NULL, NULL, NULL, NULL, NULL, 'Negeri', NULL, NULL, NULL, NULL, NULL);
 
 -- --------------------------------------------------------
 

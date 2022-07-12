@@ -60,7 +60,7 @@ class SekolahController extends Controller
     public function edit($id)
     {
         //
-        $sek = sekolah::findorfail($id);
+        $sek = Sekolah::findorfail($id);
         return view('primary.sekolah.edit', compact('sek'));
     }
 
@@ -74,12 +74,12 @@ class SekolahController extends Controller
     public function update(Request $request, $id)
     {
         //
-        $sek = sekolah::findorfail($id);
+        $sek = Sekolah::findorfail($id);
 
         if($sek->update($request->all())) {
-            Alert::success('Berhasil', 'Data User Berhasil Ditambahkan');
+            Alert::success('Berhasil', 'Data Sekolah Berhasil Diperbarui');
         } else {
-            Alert::error('Gagal', 'Data User Gagal Ditambahkan');
+            Alert::error('Gagal', 'Data Sekolah Gagal Diperbarui');
         }
 
         return redirect()->back();
