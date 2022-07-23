@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 12, 2022 at 04:21 AM
+-- Generation Time: Jul 22, 2022 at 09:00 AM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 7.4.29
 
@@ -20,6 +20,54 @@ SET time_zone = "+00:00";
 --
 -- Database: `sarpras`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `blog_category`
+--
+
+CREATE TABLE `blog_category` (
+  `id` int(10) NOT NULL,
+  `name` varchar(100) DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `blog_category`
+--
+
+INSERT INTO `blog_category` (`id`, `name`, `created_at`, `updated_at`) VALUES
+(3, 'Pendidikan', '2022-07-21 22:07:24', '2022-07-21 22:07:24');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `blog_post`
+--
+
+CREATE TABLE `blog_post` (
+  `id` int(10) NOT NULL,
+  `id_category` int(10) DEFAULT NULL,
+  `title` longtext DEFAULT NULL,
+  `blog` longtext DEFAULT NULL,
+  `post_by` varchar(50) DEFAULT NULL,
+  `post_read` int(11) DEFAULT NULL,
+  `post_date` datetime DEFAULT NULL,
+  `post_slug` longtext DEFAULT NULL,
+  `post_tag` longtext DEFAULT NULL,
+  `banner_image` longtext DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `blog_post`
+--
+
+INSERT INTO `blog_post` (`id`, `id_category`, `title`, `blog`, `post_by`, `post_read`, `post_date`, `post_slug`, `post_tag`, `banner_image`, `created_at`, `updated_at`) VALUES
+(1, 3, 'What is Lorem Ipsum?', '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In suscipit interdum erat quis volutpat. Nam dictum velit id orci porttitor, quis efficitur tortor blandit. Fusce tempor augue risus, vel cursus magna tristique quis. In hac habitasse platea dictumst. Morbi sollicitudin, purus eu imperdiet scelerisque, nisi diam rutrum orci, in rutrum enim dolor cursus diam. Nullam rhoncus est sem, eleifend accumsan quam dignissim et. Nulla sit amet ornare sapien. In in condimentum mi, quis molestie dolor. Nam non enim sed nisl mattis mollis non non dui. Integer lectus arcu, interdum sed elit id, varius bibendum sapien. Integer et mi at eros egestas semper. Proin sit amet sapien mollis, imperdiet turpis at, ultricies purus. Fusce tristique libero ac velit elementum, quis commodo eros eleifend. Fusce lectus mauris, interdum sed eros quis, ultrices dictum sem. Nullam a feugiat metus, a rhoncus sapien. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>\r\n\r\n<p>Suspendisse nec lectus feugiat, suscipit quam ac, elementum ante. Donec posuere enim porttitor vestibulum sollicitudin. Fusce dolor lacus, tincidunt et nulla non, semper viverra eros. In rhoncus lectus in arcu vestibulum mollis. Vestibulum luctus, magna in tempus aliquam, nisi ipsum hendrerit magna, ac tincidunt nibh enim at orci. Suspendisse est lacus, sollicitudin quis sollicitudin quis, pretium ac nisl. Vivamus vitae pharetra massa. Proin facilisis nunc ut felis hendrerit, vel molestie quam tristique.</p>\r\n\r\n<p>Morbi eget tellus maximus nulla vulputate mollis. Vestibulum ac odio eget neque aliquet rutrum commodo sed mi. Integer fermentum posuere nisl, nec tincidunt elit vulputate vitae. Aliquam orci dolor, porta non magna quis, volutpat posuere dolor. Vestibulum eget molestie tellus. Quisque pharetra tempor tortor non lacinia. Morbi id nisi auctor, efficitur felis nec, posuere mauris. Ut dapibus velit et purus vulputate, nec semper felis egestas. Sed luctus ante lacinia enim egestas blandit. Maecenas condimentum mauris nec ullamcorper feugiat. Vivamus in tortor aliquet, volutpat lorem ac, bibendum nulla. Nam enim erat, tristique eget congue in, pellentesque finibus turpis. In vel vulputate dui, non lobortis quam. Integer pulvinar mauris et nisi porttitor mattis. Proin sed porta augue, vel tempus nisl. Praesent et libero non nunc luctus lacinia vitae id metus.</p>\r\n\r\n<p>Vestibulum vestibulum non nunc id tincidunt. Donec vitae erat massa. Curabitur non elit ac sapien commodo vulputate. Aliquam in eleifend urna. Vivamus nibh ipsum, faucibus id elit nec, feugiat blandit ipsum. Suspendisse eget justo erat. Phasellus ac sagittis lectus, at finibus odio. Aenean auctor risus sed mauris venenatis congue. Integer vehicula aliquam fermentum. Vivamus dignissim nulla erat, ut auctor diam rutrum sed. Ut quis hendrerit libero. Nunc sagittis quis enim id semper. Donec placerat bibendum venenatis.</p>\r\n\r\n<p>Cras mollis ex vel semper commodo. Morbi mollis, ligula id vestibulum rutrum, ligula ante finibus ex, quis fringilla diam mi eget diam. Vivamus ac tempus odio, eu imperdiet sapien. Aliquam hendrerit arcu sem, ut consectetur nunc porta eu. Quisque consequat non dolor eget convallis. Cras id fringilla orci, eu pharetra ipsum. In mattis tortor tellus, sit amet fermentum dui finibus ultricies. Nullam magna ex, pretium in mattis sit amet, fringilla sed ex. Vivamus dictum ligula nec sagittis elementum. Donec id massa nibh. Maecenas maximus eros porta placerat blandit.</p>', 'Administrator', NULL, '2022-07-22 00:00:00', 'what-is-lorem-ipsum', 'pendidikan, tes, coba, lorem ipsum', 'F9bnhQcLkmDpSPphdvtu2rn5AbE07k0tcTeM4AED.jpg', '2022-07-21 22:29:33', '2022-07-21 22:29:33');
 
 -- --------------------------------------------------------
 
@@ -96,6 +144,20 @@ CREATE TABLE `password_resets` (
   `token` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `roadmap`
+--
+
+CREATE TABLE `roadmap` (
+  `id` int(10) NOT NULL,
+  `deskripsi` longtext DEFAULT NULL,
+  `roadmap` varchar(100) DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
@@ -243,13 +305,25 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `name`, `username`, `email`, `email_verified_at`, `password`, `level`, `id_sekolah`, `remember_token`, `created_at`, `updated_at`) VALUES
-(1, 'Aministrator', 'admin', 'admin@gmail.com', NULL, '$2a$12$3YCrEbEPzcc6U.XQl4NiEuB6Ez.xxF1YzEia90ugLNtCJviNfiHIO', 'ADMIN', NULL, NULL, NULL, NULL),
+(1, 'Administrator', 'admin', 'admin@gmail.com', NULL, '$2a$12$3YCrEbEPzcc6U.XQl4NiEuB6Ez.xxF1YzEia90ugLNtCJviNfiHIO', 'ADMIN', NULL, NULL, NULL, NULL),
 (5, 'SD Negeri 1 Rantau Buda', '30303473', NULL, NULL, '$2y$10$7oz83N5.bcEYkC3.YAnUcu9yfFre0pxs/TEfSnUG4wG17.0I.DaUi', 'SD', 1, NULL, '2022-06-07 05:45:03', '2022-06-07 05:45:03'),
 (6, 'SD Negeri 3 Rantau Buda', '30303485', NULL, NULL, '$2y$10$JrzR83ybQpG2STLA9DdkzOBY1VdHJCrrRAdWYZ0ozhxoaYjnnA2Yi', 'SD', 3, NULL, '2022-06-07 05:45:08', '2022-06-07 05:45:08');
 
 --
 -- Indexes for dumped tables
 --
+
+--
+-- Indexes for table `blog_category`
+--
+ALTER TABLE `blog_category`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `blog_post`
+--
+ALTER TABLE `blog_post`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `failed_jobs`
@@ -275,6 +349,12 @@ ALTER TABLE `migrations`
 --
 ALTER TABLE `password_resets`
   ADD KEY `password_resets_email_index` (`email`);
+
+--
+-- Indexes for table `roadmap`
+--
+ALTER TABLE `roadmap`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `ruang_kelas`
@@ -313,6 +393,18 @@ ALTER TABLE `users`
 --
 
 --
+-- AUTO_INCREMENT for table `blog_category`
+--
+ALTER TABLE `blog_category`
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
+-- AUTO_INCREMENT for table `blog_post`
+--
+ALTER TABLE `blog_post`
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
 -- AUTO_INCREMENT for table `failed_jobs`
 --
 ALTER TABLE `failed_jobs`
@@ -329,6 +421,12 @@ ALTER TABLE `jumlah_siswa`
 --
 ALTER TABLE `migrations`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+
+--
+-- AUTO_INCREMENT for table `roadmap`
+--
+ALTER TABLE `roadmap`
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `ruang_kelas`
