@@ -109,9 +109,11 @@ class BlogController extends Controller
      * @param  \App\Models\Blog_category  $blog_category
      * @return \Illuminate\Http\Response
      */
-    public function edit(Blog_category $blog_category)
+    public function edit($id)
     {
-        //
+        $category = Blog_category::all();
+        $blog = Blog::where('id', $id)->firstOrFail();
+        return view('administrator.blog.edit', compact('category', 'blog'));
     }
 
     /**
@@ -121,9 +123,22 @@ class BlogController extends Controller
      * @param  \App\Models\Blog_category  $blog_category
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Blog_category $blog_category)
+    public function update(Request $request, $id)
     {
-        //
+        $this->validate($request, [
+            'title' => 'required',
+            'blog' => 'required'
+        ]);
+
+        $post = Blog::find($id);
+        if($request->hasFile('banner_image')){
+            $request->validate([
+              'image' => 'required|image|mimes:jpg,png,jpeg,gif,svg|max:2048',
+            ]);
+            $request->banner_image->store('blog', 'public');
+
+            
+        }
     }
 
     /**
@@ -132,9 +147,16 @@ class BlogController extends Controller
      * @param  \App\Models\Blog_category  $blog_category
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Blog_category $blog_category)
+    public function destroy($id)
     {
-        //
+        $del = Blog::where('id', $id)->firstOrFail();
+
+        if($del->delete()) {
+            Alert::success('Berhasil', 'Data Blog Berhasil Dihapus');
+        } else {
+            Alert::error('Gagal', 'Data Blog Gagal Dihapus');
+        }
+        return redirect()->back();
     }
 
     public function destroy_kategori($id)

@@ -89,7 +89,7 @@
         <div class="block block-rounded">
             <ul class="nav nav-tabs nav-tabs-block" role="tablist">
                 <li class="nav-item">
-                    <button class="nav-link active" id="btabs-static-post-tab" data-bs-toggle="tab" data-bs-target="#btabs-static-post" role="tab" aria-controls="btabs-static-post" aria-selected="true">Post ()</button>
+                    <button class="nav-link active" id="btabs-static-post-tab" data-bs-toggle="tab" data-bs-target="#btabs-static-post" role="tab" aria-controls="btabs-static-post" aria-selected="true">Post ({{$total}})</button>
                 </li>
                 <li class="nav-item">
                     <button class="nav-link" id="btabs-static-kategori-tab" data-bs-toggle="tab" data-bs-target="#btabs-static-kategori" role="tab" aria-controls="btabs-static-kategori" aria-selected="false">Kategori</button>
@@ -135,12 +135,12 @@
                                     {{date('l, d M Y', strtotime($row->post_date))}}
                                 </td>
                                 <td class="text-center">
-                                    <a class="btn btn-sm btn-alt-secondary" href="#">
-                                    <i class="fa fa-fw fa-pencil-alt text-primary"></i>
+                                    <a class="btn btn-sm btn-alt-secondary" href="{{route('blog.edit', $row->id)}}">
+                                        <i class="fa fa-fw fa-pencil-alt text-primary"></i>
                                     </a>
-                                    <a class="btn btn-sm btn-alt-secondary" href="javascript:void(0)">
-                                    <i class="fa fa-fw fa-times text-danger"></i>
-                                    </a>
+                                    <button type="button" class="btn btn-sm btn-alt-secondary" onclick="confirmDelete('administrator/blog', '{{ $row->id }}')">
+                                        <i class="fa fa-fw fa-times text-danger"></i>
+                                    </button>
                                 </td>
                             </tr>
                             @endforeach

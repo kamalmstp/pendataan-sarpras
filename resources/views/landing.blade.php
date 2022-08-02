@@ -208,7 +208,6 @@
       <!-- Main Container -->
       <main id="main-container">
 
-<<<<<<< HEAD
         <!-- <div class="bg-image" style="background-image: url({{asset('media/photos/photo15@2x.jpg')}});">
           <div class="bg-primary-dark-op">
             <div class="content content-full">
@@ -219,171 +218,6 @@
             </div>
           </div>
         </div> -->
-
-        <!-- Navigation -->
-        <div class="bg-sidebar-dark">
-          <div class="content">
-            <!-- Toggle Main Navigation -->
-            <div class="d-lg-none push">
-              <!-- Class Toggle, functionality initialized in Helpers.dmToggleClass() -->
-              <button type="button" class="btn w-100 btn-primary d-flex justify-content-between align-items-center" data-toggle="class-toggle" data-target="#main-navigation" data-class="d-none">
-                Menu
-                <i class="fa fa-bars"></i>
-              </button>
-            </div>
-            <!-- END Toggle Main Navigation -->
-
-            <!-- Main Navigation -->
-            <div id="main-navigation" class="d-none d-lg-block push">
-              <ul class="nav-main nav-main-horizontal nav-main-hover nav-main-dark">
-                <li class="nav-main-item">
-                  <a class="nav-main-link active" href="bd_dashboard.html">
-                    <i class="nav-main-link-icon fa fa-compass"></i>
-                    <span class="nav-main-link-name">Dashboard</span>
-                  </a>
-                </li>
-                <li class="nav-main-heading">Variations</li>
-                <li class="nav-main-item">
-                  <a class="nav-main-link nav-main-link-submenu" data-toggle="submenu" aria-haspopup="true" aria-expanded="false" href="#">
-                    <i class="nav-main-link-icon fa fa-puzzle-piece"></i>
-                    <span class="nav-main-link-name">Variations</span>
-                  </a>
-                  <ul class="nav-main-submenu">
-                    <li class="nav-main-item">
-                      <a class="nav-main-link" href="bd_simple_1.html">
-                        <span class="nav-main-link-name">Simple 1</span>
-                      </a>
-                    </li>
-                    <li class="nav-main-item">
-                      <a class="nav-main-link" href="bd_simple_2.html">
-                        <span class="nav-main-link-name">Simple 2</span>
-                      </a>
-                    </li>
-                    <li class="nav-main-item">
-                      <a class="nav-main-link" href="bd_image_1.html">
-                        <span class="nav-main-link-name">Image 1</span>
-                      </a>
-                    </li>
-                    <li class="nav-main-item">
-                      <a class="nav-main-link" href="bd_image_2.html">
-                        <span class="nav-main-link-name">Image 2</span>
-                      </a>
-                    </li>
-                    <li class="nav-main-item">
-                      <a class="nav-main-link" href="bd_video_1.html">
-                        <span class="nav-main-link-name">Video 1</span>
-                      </a>
-                    </li>
-                    <li class="nav-main-item">
-                      <a class="nav-main-link" href="bd_video_2.html">
-                        <span class="nav-main-link-name">Video 2</span>
-                      </a>
-                    </li>
-                    <li class="nav-main-item">
-                      <a class="nav-main-link nav-main-link-submenu" data-toggle="submenu" aria-haspopup="true" aria-expanded="false" href="#">
-                        <span class="nav-main-link-name">More Options</span>
-                      </a>
-                      <ul class="nav-main-submenu">
-                        <li class="nav-main-item">
-                          <a class="nav-main-link" href="javascript:void(0)">
-                            <span class="nav-main-link-name">Another Link</span>
-                          </a>
-                        </li>
-                        <li class="nav-main-item">
-                          <a class="nav-main-link" href="javascript:void(0)">
-                            <span class="nav-main-link-name">Another Link</span>
-                          </a>
-                        </li>
-                        <li class="nav-main-item">
-                          <a class="nav-main-link" href="javascript:void(0)">
-                            <span class="nav-main-link-name">Another Link</span>
-                          </a>
-                        </li>
-                      </ul>
-                    </li>
-                  </ul>
-                </li>
-                <li class="nav-main-item">
-                  <a class="nav-main-link" href="bd_search.html">
-                    <i class="nav-main-link-icon fa fa-search"></i>
-                    <span class="nav-main-link-name">Search</span>
-                  </a>
-                </li>
-                <li class="nav-main-item">
-                  <a class="nav-main-link" href="be_pages_dashboard.html">
-                    <i class="nav-main-link-icon fa fa-undo"></i>
-                    <span class="nav-main-link-name">Go Back</span>
-                  </a>
-                </li>
-                <li class="nav-main-heading">Extra</li>
-                <li class="nav-main-item ms-lg-auto">
-                  <a class="nav-main-link nav-main-link-submenu" data-toggle="submenu" aria-haspopup="true" aria-expanded="false" href="#">
-                    <i class="nav-main-link-icon fa fa-brush"></i>
-                    <span class="nav-main-link-name d-lg-none">Themes</span>
-                  </a>
-                  <ul class="nav-main-submenu nav-main-submenu-right">
-                    <li class="nav-main-item">
-                      <a class="nav-main-link" data-toggle="theme" data-theme="default" href="#">
-                        <i class="nav-main-link-icon fa fa-circle text-default"></i>
-                        <span class="nav-main-link-name">Default</span>
-                      </a>
-                    </li>
-                    <li class="nav-main-item">
-                      <a class="nav-main-link" data-toggle="theme" data-theme="{{asset('css/themes/xwork.min.css')}}" href="#">
-                        <i class="nav-main-link-icon fa fa-circle text-xwork"></i>
-                        <span class="nav-main-link-name">xWork</span>
-                      </a>
-                    </li>
-                    <li class="nav-main-item">
-                      <a class="nav-main-link" data-toggle="theme" data-theme="{{asset('css/themes/xmodern.min.css')}}" href="#">
-                        <i class="nav-main-link-icon fa fa-circle text-xmodern"></i>
-                        <span class="nav-main-link-name">xModern</span>
-                      </a>
-                    </li>
-                    <li class="nav-main-item">
-                      <a class="nav-main-link" data-toggle="theme" data-theme="{{asset('css/themes/xeco.min.css')}}" href="#">
-                        <i class="nav-main-link-icon fa fa-circle text-xeco"></i>
-                        <span class="nav-main-link-name">xEco</span>
-                      </a>
-                    </li>
-                    <li class="nav-main-item">
-                      <a class="nav-main-link" data-toggle="theme" data-theme="{{asset('css/themes/xsmooth.min.css')}}" href="#">
-                        <i class="nav-main-link-icon fa fa-circle text-xsmooth"></i>
-                        <span class="nav-main-link-name">xSmooth</span>
-                      </a>
-                    </li>
-                    <li class="nav-main-item">
-                      <a class="nav-main-link" data-toggle="theme" data-theme="{{asset('css/themes/xinspire.min.css')}}" href="#">
-                        <i class="nav-main-link-icon fa fa-circle text-xinspire"></i>
-                        <span class="nav-main-link-name">xInspire</span>
-                      </a>
-                    </li>
-                    <li class="nav-main-item">
-                      <a class="nav-main-link" data-toggle="theme" data-theme="{{asset('css/themes/xdream.min.css')}}" href="#">
-                        <i class="nav-main-link-icon fa fa-circle text-xdream"></i>
-                        <span class="nav-main-link-name">xDream</span>
-                      </a>
-                    </li>
-                    <li class="nav-main-item">
-                      <a class="nav-main-link" data-toggle="theme" data-theme="{{asset('css/themes/xpro.min.css')}}" href="#">
-                        <i class="nav-main-link-icon fa fa-circle text-xpro"></i>
-                        <span class="nav-main-link-name">xPro</span>
-                      </a>
-                    </li>
-                    <li class="nav-main-item">
-                      <a class="nav-main-link" data-toggle="theme" data-theme="{{asset('css/themes/xplay.min.css')}}" href="#">
-                        <i class="nav-main-link-icon fa fa-circle text-xplay"></i>
-                        <span class="nav-main-link-name">xPlay</span>
-                      </a>
-                    </li>
-                  </ul>
-                </li>
-              </ul>
-            </div>
-            <!-- END Main Navigation -->
-          </div>
-        </div>
-        <!-- END Navigation -->
 
         <!-- Page Content -->
         <!-- Carousel -->
@@ -415,8 +249,6 @@
         </div>
         <!-- Carousel -->
 
-=======
->>>>>>> 7fb29b410402330b1268029520fcecd8fbaed1b5
         <div class="content">
           <div class="col-md-6">
             <div class="text-center py-3">
