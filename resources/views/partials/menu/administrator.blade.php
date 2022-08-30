@@ -43,6 +43,12 @@
             </li> -->
             <li class="nav-main-heading">Pengaturan</li>
             <li class="nav-main-item">
+                <a class="nav-main-link" href="{{route('import.index')}}">
+                <i class="nav-main-link-icon fa fa-file-import"></i>
+                <span class="nav-main-link-name">Import Data</span>
+                </a>
+            </li>
+            <li class="nav-main-item">
                 <a class="nav-main-link" href="/">
                 <i class="nav-main-link-icon fa fa-users"></i>
                 <span class="nav-main-link-name">Data User</span>

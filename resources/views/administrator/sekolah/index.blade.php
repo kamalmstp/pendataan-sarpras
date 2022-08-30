@@ -30,7 +30,7 @@
     <div class="block block-rounded">
         <div class="block-header block-header-default">
         <h3 class="block-title">Data Sekolah</h3>
-        <!-- <a href="{{route('sekolah.create')}}" class="btn btn-primary"> <i class="fa fa-plus"></i> Tambah Data</a> -->
+        <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#import"><i class="fa fa-file-import"></i> Import</button>
         </div>
         <div class="block-content block-content-full" style="overflow-x:auto;">
         <table id="sekolah" class="table table-bordered table-striped table-vcenter js-dataTable-full">
@@ -88,6 +88,42 @@
             </tbody>
         </table>
         </div>
+    </div>
+</div>
+@endsection
+
+@section('modal')
+<div class="modal fade" id="import" tabindex="-1" role="dialog" aria-labelledby="add" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-popout modal-lg" role="document">
+      <div class="modal-content">
+        <form action="{{route('sekolah.import')}}" method="post" enctype="multipart/form-data">
+            @csrf
+            <div class="block block-rounded block-themed block-transparent mb-0">
+            <div class="block-header bg-primary-dark">
+                <h3 class="block-title">Import Data Sekolah</h3>
+                <div class="block-options">
+                <button type="button" class="btn-block-option" data-bs-dismiss="modal" aria-label="Close">
+                    <i class="fa fa-fw fa-times"></i>
+                </button>
+                </div>
+            </div>
+            <div class="block-content">
+                <div class="row">
+                    <div class="col-lg-6 col-xl-6">
+                        <div class="mb-4">
+                            <label class="form-label" for="file">File Import (Excel)</label>
+                            <input type="file" id="file" name="file" class="form-control" required="required">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="block-content block-content-full text-end bg-body">
+                <button type="button" class="btn btn-sm btn-alt-secondary" data-bs-dismiss="modal">Batal</button>
+                <button type="submit" class="btn btn-sm btn-primary" data-bs-dismiss="modal">Import</button>
+            </div>
+            </div>
+        </form>
+      </div>
     </div>
 </div>
 @endsection

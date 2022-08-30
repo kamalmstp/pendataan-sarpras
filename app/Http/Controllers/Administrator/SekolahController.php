@@ -7,7 +7,9 @@ use App\Models\Sekolah;
 use App\Models\User;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Http\Request;
+use App\Imports\SekolahImport;
 use RealRashid\SweetAlert\Facades\Alert;
+use Maatwebsite\Excel\Facades\Excel;
 
 class SekolahController extends Controller
 {
@@ -35,6 +37,25 @@ class SekolahController extends Controller
         //
         return view('administrator.sekolah.create');
     }
+
+    public function import(Request $request) 
+	{
+		$this->validate($request, [
+			'file' => 'required|mimes:csv,xls,xlsx'
+		]);
+ 
+		$file = $request->file('file');
+ 
+		$nama_file = rand().$file->getClientOriginalName();
+ 
+		$file->move('file_import',$nama_file);
+ 
+		Excel::import(new SekolahImport, public_path('/file_import/'.$nama_file));
+ 
+		Alert::success('Berhasil', 'Data Sekolah Berhasil Ditambahkan');
+ 
+		return redirect()->route('sekolah.index');
+	}
 
     public function create_user(Request $request)
     {

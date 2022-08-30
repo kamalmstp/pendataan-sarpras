@@ -34,6 +34,45 @@ CREATE TABLE `blog_category` (
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+CREATE TABLE `ruangan` (
+`id` INT(10) NOT NULL PRIMARY KEY AUTO_INCREMENT,
+`id_sekolah` INT(10) DEFAULT NULL,
+`kepsek` varchar(50) DEFAULT NULL,
+`kepsek_luas` varchar(50) DEFAULT NULL,
+`kepsek_kondisi` varchar(50) DEFAULT NULL,
+`guru` varchar(50) DEFAULT NULL,
+`guru_luas` varchar(50) DEFAULT NULL,
+`guru_kondisi` varchar(50) DEFAULT NULL,
+`tu` varchar(50) DEFAULT NULL,
+`tu_luas` varchar(50) DEFAULT NULL,
+`tu_kondisi` varchar(50) DEFAULT NULL,
+`perpus` varchar(50) DEFAULT NULL,
+`perpus_luas` varchar(50) DEFAULT NULL,
+`perpus_kondisi` varchar(50) DEFAULT NULL,
+`labkom` varchar(50) DEFAULT NULL,
+`labkom_luas` varchar(50) DEFAULT NULL,
+`labkom_kondisi` varchar(50) DEFAULT NULL,
+`uks` varchar(50) DEFAULT NULL,
+`uks_luas` varchar(50) DEFAULT NULL,
+`uks_kondisi` varchar(50) DEFAULT NULL,
+`ibadah` varchar(50) DEFAULT NULL,
+`ibadah_luas` varchar(50) DEFAULT NULL,
+`ibadah_kondisi` varchar(50) DEFAULT NULL,
+`org` varchar(50) DEFAULT NULL,
+`org_luas` varchar(50) DEFAULT NULL,
+`org_kondisi` varchar(50) DEFAULT NULL,
+`gudang` varchar(50) DEFAULT NULL,
+`gudang_luas` varchar(50) DEFAULT NULL,
+`gudang_kondisi` varchar(50) DEFAULT NULL,
+`lap` varchar(50) DEFAULT NULL,
+`lap_luas` varchar(50) DEFAULT NULL,
+`lap_kondisi` varchar(50) DEFAULT NULL,
+`kantin` varchar(50) DEFAULT NULL,
+`kantin_luas` varchar(50) DEFAULT NULL,
+`kantin_kondisi` varchar(50) DEFAULT NULL,
+`created_at` timestamp NULL DEFAULT NULL,
+`updated_at` timestamp NULL DEFAULT NULL
+);
 --
 -- Dumping data for table `blog_category`
 --
