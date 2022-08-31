@@ -149,7 +149,7 @@
                 </a>
               </li>
               <li class="nav-main-item">
-                <a class="nav-main-link" href="#">
+                <a class="nav-main-link" href="{{route('roadmap')}}">
                   <i class="nav-main-link-icon fa fa-info-circle"></i>
                   <span class="nav-main-link-name">Tentang DigiPen</span>
                 </a>
@@ -411,98 +411,13 @@
         </div>
       </main>
       
-      <!-- LeafLet ???? -->
-        <div class="bg-body-extra-light">
+        <!-- <div class="bg-body-extra-light">
           <div class="content content-full">
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3983.403136934577!2d116.22489031472026!3d-3.249554441834845!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2def302b2ced3c85%3A0x89e9d007fad8f406!2sDinas%20Pendidikan%20dan%20Kebudayaan%20Kabupaten%20Kotabaru!5e0!3m2!1sen!2sid!4v1659279976558!5m2!1sen!2sid" width="100%" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
           </div>
-        </div>
-      <!-- END LeafLet -->
+        </div> -->
 
-      <footer id="page-footer" class="footer-static bg-body-extra-light">
-        <div class="content py-4">
-          <div class="row items-push fs-sm border-bottom pt-4">
-            <div class="col-6 col-md-4">
-              <h3 class="fw-light">Footer Menu 1</h3>
-              <ul class="list list-simple-mini">
-                <li>
-                  <a class="fw-semibold" href="javascript:void(0)">
-                    <i class="fa fa-fw fa-users text-primary-lighter me-1"></i> Menu 1
-                  </a>
-                </li>
-                <li>
-                  <a class="fw-semibold" href="javascript:void(0)">
-                    <i class="fab fa-fw fa-paypal text-primary-lighter me-1"></i> Menu 2
-                  </a>
-                </li>
-                <li>
-                  <a class="fw-semibold" href="javascript:void(0)">
-                    <i class="fa fa-fw fa-wrench text-primary-lighter me-1"></i> Menu 3
-                  </a>
-                </li>
-              </ul>
-            </div>
-            <div class="col-md-4">
-              <h3 class="fw-light">Footer Menu 2</h3>
-              <ul class="list list-simple-mini">
-                <li>
-                  <a class="fw-semibold" href="javascript:void(0)">
-                    <i class="fa fa-fw fa-database text-primary-lighter me-1"></i> Menu 1
-                  </a>
-                </li>
-                <li>
-                  <a class="fw-semibold" href="javascript:void(0)">
-                    <i class="fa fa-fw fa-globe-americas text-primary-lighter me-1"></i> Menu 2
-                  </a>
-                </li>
-                <li>
-                  <a class="fw-semibold" href="javascript:void(0)">
-                    <i class="fa fa-fw fa-envelope text-primary-lighter me-1"></i> Menu 3
-                  </a>
-                </li>
-                <li>
-                  <a class="fw-semibold" href="javascript:void(0)">
-                    <i class="fa fa-fw fa-wrench text-primary-lighter me-1"></i> Menu 4
-                  </a>
-                </li>
-              </ul>
-            </div>
-            <div class="col-6 col-md-4">
-              <h3 class="fw-light">Projects</h3>
-              <ul class="list list-simple-mini">
-                <li>
-                  <a class="fw-semibold" href="javascript:void(0)">
-                    <i class="fa fa-fw fa-globe text-primary-lighter me-1"></i> example1.com
-                  </a>
-                </li>
-                <li>
-                  <a class="fw-semibold" href="javascript:void(0)">
-                    <i class="fa fa-fw fa-globe text-primary-lighter me-1"></i> example2.com
-                  </a>
-                </li>
-                <li>
-                  <a class="fw-semibold" href="javascript:void(0)">
-                    <i class="fa fa-fw fa-globe text-primary-lighter me-1"></i> example2.com
-                  </a>
-                </li>
-                <li>
-                  <a class="fw-semibold text-dark" href="javascript:void(0)">
-                    <i class="fa fa-fw fa-plus text-muted me-1"></i> Add new project
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div class="row fs-sm pt-4">
-            <div class="col-sm-6 order-sm-2 mb-1 mb-sm-0 text-center text-sm-end">
-              Created by <a class="fw-semibold" href="#" target="_blank">Banua Coding</a>
-            </div>
-            <div class="col-sm-6 order-sm-1 text-center text-sm-start">
-              <a class="fw-semibold" href="#" target="_blank">DigiPen Kotabaru</a> &copy; <span data-toggle="year-copy"></span>
-            </div>
-          </div>
-        </div>
-      </footer>
+      @include('partials.frontend.footer')
     </div>
 
     <script src="{{asset('js/dashmix.app.min.js')}}"></script>
