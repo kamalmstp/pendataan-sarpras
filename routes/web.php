@@ -28,6 +28,8 @@ Route::view('/pages/datatables', 'pages.datatables');
 Route::view('/pages/blank', 'pages.blank');
 
 Route::get('/', [GuestController::class, 'index'])->name('/');
+Route::get('/daftar_sekolah', [GuestController::class, 'daftar_sekolah'])->name('daftar_sekolah');
+Route::get('/roadmap', [GuestController::class, 'roadmap'])->name('roadmap');
 Route::get('/login', [LoginController::class, 'showLoginForm'])->name('login');
 Route::post('/login', [LoginController::class, 'login'])->name('login');
 Route::post('/logout', [LoginController::class, 'logout'])->name('logout');

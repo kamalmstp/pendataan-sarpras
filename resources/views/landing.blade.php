@@ -67,19 +67,25 @@
                 </a>
               </li>
               <li class="nav-main-item">
-                <a class="nav-main-link" href="">
-                  <i class="nav-main-link-icon fa fa-user-circle"></i>
-                  <span class="nav-main-link-name">Profile</span>
+                <a class="nav-main-link" href="{{route('daftar_sekolah')}}">
+                  <i class="nav-main-link-icon fa fa-university"></i>
+                  <span class="nav-main-link-name">Daftar Sekolah</span>
                 </a>
               </li>
               <li class="nav-main-item">
                 <a class="nav-main-link" href="">
-                  <i class="nav-main-link-icon fa fa-envelope-open"></i>
-                  <span class="nav-main-link-name">Messages</span>
+                  <i class="nav-main-link-icon fa fa-info-circle"></i>
+                  <span class="nav-main-link-name">Tentang DigiPen</span>
                 </a>
               </li>
-              <li class="nav-main-heading">More</li>
               <li class="nav-main-item">
+                <a class="nav-main-link" href="{{route('login')}}">
+                  <i class="nav-main-link-icon fa fa-sign-in"></i>
+                  <span class="nav-main-link-name">Login</span>
+                </a>
+              </li>
+              <!-- <li class="nav-main-heading">More</li> -->
+              <!-- <li class="nav-main-item">
                 <a class="nav-main-link nav-main-link-submenu" data-toggle="submenu" aria-haspopup="true" aria-expanded="false" href="#">
                   <i class="nav-main-link-icon fa fa-briefcase"></i>
                   <span class="nav-main-link-name">Projects</span>
@@ -106,10 +112,9 @@
                     </a>
                   </li>
                 </ul>
-              </li>
+              </li> -->
             </ul>
           </div>
-          <!-- END Side Navigation -->
         </div>
         <!-- END Sidebar Scrolling -->
       </nav>
@@ -138,7 +143,7 @@
                 </a>
               </li>
               <li class="nav-main-item">
-                <a class="nav-main-link" href="#">
+                <a class="nav-main-link" href="{{route('daftar_sekolah')}}">
                   <i class="nav-main-link-icon fa fa-university"></i>
                   <span class="nav-main-link-name">Daftar Sekolah</span>
                 </a>
@@ -188,177 +193,6 @@
             </div>
           </div>
         </div> -->
-
-      <!-- ALL COMMENT -->
-        <!-- Navigation -->
-        <!-- <div class="bg-sidebar-dark"> -->
-          <!-- <div class="content"> -->
-            <!-- Toggle Main Navigation -->
-            <!-- <div class="d-lg-none push"> -->
-              <!-- Class Toggle, functionality initialized in Helpers.dmToggleClass() -->
-              <!-- <button type="button" class="btn w-100 btn-primary d-flex justify-content-between align-items-center" data-toggle="class-toggle" data-target="#main-navigation" data-class="d-none">
-                Menu
-                <i class="fa fa-bars"></i>
-              </button>
-            </div> -->
-            <!-- END Toggle Main Navigation -->
-
-            <!-- Main Navigation -->
-            <!-- <div id="main-navigation" class="d-none d-lg-block push">
-              <ul class="nav-main nav-main-horizontal nav-main-hover nav-main-dark">
-                <li class="nav-main-item">
-                  <a class="nav-main-link active" href="bd_dashboard.html">
-                    <i class="nav-main-link-icon fa fa-compass"></i>
-                    <span class="nav-main-link-name">Dashboard</span>
-                  </a>
-                </li>
-                <li class="nav-main-heading">Variations</li>
-                <li class="nav-main-item">
-                  <a class="nav-main-link nav-main-link-submenu" data-toggle="submenu" aria-haspopup="true" aria-expanded="false" href="#">
-                    <i class="nav-main-link-icon fa fa-puzzle-piece"></i>
-                    <span class="nav-main-link-name">Variations</span>
-                  </a>
-                  <ul class="nav-main-submenu">
-                    <li class="nav-main-item">
-                      <a class="nav-main-link" href="bd_simple_1.html">
-                        <span class="nav-main-link-name">Simple 1</span>
-                      </a>
-                    </li>
-                    <li class="nav-main-item">
-                      <a class="nav-main-link" href="bd_simple_2.html">
-                        <span class="nav-main-link-name">Simple 2</span>
-                      </a>
-                    </li>
-                    <li class="nav-main-item">
-                      <a class="nav-main-link" href="bd_image_1.html">
-                        <span class="nav-main-link-name">Image 1</span>
-                      </a>
-                    </li>
-                    <li class="nav-main-item">
-                      <a class="nav-main-link" href="bd_image_2.html">
-                        <span class="nav-main-link-name">Image 2</span>
-                      </a>
-                    </li>
-                    <li class="nav-main-item">
-                      <a class="nav-main-link" href="bd_video_1.html">
-                        <span class="nav-main-link-name">Video 1</span>
-                      </a>
-                    </li>
-                    <li class="nav-main-item">
-                      <a class="nav-main-link" href="bd_video_2.html">
-                        <span class="nav-main-link-name">Video 2</span>
-                      </a>
-                    </li>
-                    <li class="nav-main-item">
-                      <a class="nav-main-link nav-main-link-submenu" data-toggle="submenu" aria-haspopup="true" aria-expanded="false" href="#">
-                        <span class="nav-main-link-name">More Options</span>
-                      </a>
-                      <ul class="nav-main-submenu">
-                        <li class="nav-main-item">
-                          <a class="nav-main-link" href="javascript:void(0)">
-                            <span class="nav-main-link-name">Another Link</span>
-                          </a>
-                        </li>
-                        <li class="nav-main-item">
-                          <a class="nav-main-link" href="javascript:void(0)">
-                            <span class="nav-main-link-name">Another Link</span>
-                          </a>
-                        </li>
-                        <li class="nav-main-item">
-                          <a class="nav-main-link" href="javascript:void(0)">
-                            <span class="nav-main-link-name">Another Link</span>
-                          </a>
-                        </li>
-                      </ul>
-                    </li>
-                  </ul>
-                </li>
-                <li class="nav-main-item">
-                  <a class="nav-main-link" href="bd_search.html">
-                    <i class="nav-main-link-icon fa fa-search"></i>
-                    <span class="nav-main-link-name">Search</span>
-                  </a>
-                </li>
-                <li class="nav-main-item">
-                  <a class="nav-main-link" href="be_pages_dashboard.html">
-                    <i class="nav-main-link-icon fa fa-undo"></i>
-                    <span class="nav-main-link-name">Go Back</span>
-                  </a>
-                </li>
-                <li class="nav-main-heading">Extra</li>
-                <li class="nav-main-item ms-lg-auto">
-                  <a class="nav-main-link nav-main-link-submenu" data-toggle="submenu" aria-haspopup="true" aria-expanded="false" href="#">
-                    <i class="nav-main-link-icon fa fa-brush"></i>
-                    <span class="nav-main-link-name d-lg-none">Themes</span>
-                  </a>
-                  <ul class="nav-main-submenu nav-main-submenu-right">
-                    <li class="nav-main-item">
-                      <a class="nav-main-link" data-toggle="theme" data-theme="default" href="#">
-                        <i class="nav-main-link-icon fa fa-circle text-default"></i>
-                        <span class="nav-main-link-name">Default</span>
-                      </a>
-                    </li>
-                    <li class="nav-main-item">
-                      <a class="nav-main-link" data-toggle="theme" data-theme="{{asset('css/themes/xwork.min.css')}}" href="#">
-                        <i class="nav-main-link-icon fa fa-circle text-xwork"></i>
-                        <span class="nav-main-link-name">xWork</span>
-                      </a>
-                    </li>
-                    <li class="nav-main-item">
-                      <a class="nav-main-link" data-toggle="theme" data-theme="{{asset('css/themes/xmodern.min.css')}}" href="#">
-                        <i class="nav-main-link-icon fa fa-circle text-xmodern"></i>
-                        <span class="nav-main-link-name">xModern</span>
-                      </a>
-                    </li>
-                    <li class="nav-main-item">
-                      <a class="nav-main-link" data-toggle="theme" data-theme="{{asset('css/themes/xeco.min.css')}}" href="#">
-                        <i class="nav-main-link-icon fa fa-circle text-xeco"></i>
-                        <span class="nav-main-link-name">xEco</span>
-                      </a>
-                    </li>
-                    <li class="nav-main-item">
-                      <a class="nav-main-link" data-toggle="theme" data-theme="{{asset('css/themes/xsmooth.min.css')}}" href="#">
-                        <i class="nav-main-link-icon fa fa-circle text-xsmooth"></i>
-                        <span class="nav-main-link-name">xSmooth</span>
-                      </a>
-                    </li>
-                    <li class="nav-main-item">
-                      <a class="nav-main-link" data-toggle="theme" data-theme="{{asset('css/themes/xinspire.min.css')}}" href="#">
-                        <i class="nav-main-link-icon fa fa-circle text-xinspire"></i>
-                        <span class="nav-main-link-name">xInspire</span>
-                      </a>
-                    </li>
-                    <li class="nav-main-item">
-                      <a class="nav-main-link" data-toggle="theme" data-theme="{{asset('css/themes/xdream.min.css')}}" href="#">
-                        <i class="nav-main-link-icon fa fa-circle text-xdream"></i>
-                        <span class="nav-main-link-name">xDream</span>
-                      </a>
-                    </li>
-                    <li class="nav-main-item">
-                      <a class="nav-main-link" data-toggle="theme" data-theme="{{asset('css/themes/xpro.min.css')}}" href="#">
-                        <i class="nav-main-link-icon fa fa-circle text-xpro"></i>
-                        <span class="nav-main-link-name">xPro</span>
-                      </a>
-                    </li>
-                    <li class="nav-main-item">
-                      <a class="nav-main-link" data-toggle="theme" data-theme="{{asset('css/themes/xplay.min.css')}}" href="#">
-                        <i class="nav-main-link-icon fa fa-circle text-xplay"></i>
-                        <span class="nav-main-link-name">xPlay</span>
-                      </a>
-                    </li>
-                  </ul>
-                </li>
-              </ul>
-            </div> -->
-            <!-- END Main Navigation -->
-          <!-- </div>
-        </div> -->
-        <!-- END Navigation -->
-      <!-- END all comment -->
-      
-        <!-- Page Content -->
-
-      <!-- Carousel -->
         <div class="bg-body-extra-light">
           <div class="content content-full">
             <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
@@ -415,19 +249,6 @@
             </div>
           </div>
         </div>
-      <!-- Carousel -->
-
-      <!-- Tentang DigiPen -->
-        <!-- <div class="content">
-          <div class="col-md-6">
-            <div class="text-center py-3">
-              <h1 class="h3 fw-bold mb-2">Digitalisasi Pendidikan Kotabaru</h1>
-            </div>
-            <h2 class="h5 fw-normal text-muted">
-              Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-              </h2>
-          </div>
-        </div> -->
         <div class="content">
           <div class="col-md-6">
             <div class="col-md py-3 d-md-flex align-items-md-center">
@@ -495,9 +316,6 @@
             </div>
           </div>
         </div>
-      <!-- END Tentang DigiPen -->
-      
-      <!-- Visi Misi Tujuan -->
         <div class="bg-header-dark">
           <div class="content content-full">
             <div class="row pt-3">
@@ -537,9 +355,6 @@
             </div>
           </div>
         </div>
-      <!-- END Visi Misi Tujuan -->
-
-      <!-- Berita-->
         <div class="content">
           <div class="d-flex justify-content-between mx-md-3 mb-2 mt-3">
             <div>
@@ -594,170 +409,7 @@
             </div>
           </div>
         </div>
-      <!-- END Berita -->
-
-      <!-- all comment -->
-        <!-- Page Content -->
-        <!-- <div class="bg-body-extra-light">
-          <div class="content content-full"> -->
-
-            <!-- Quick Menu -->
-            <!-- <div class="row">
-              <div class="col-6 col-md-4 col-xl-2">
-                <a class="block block-rounded block-bordered block-link-shadow text-center" href="javascript:void(0)">
-                  <div class="block-content">
-                    <p class="my-2">
-                      <i class="fa fa-compass fa-2x text-muted"></i>
-                    </p>
-                    <p class="fw-semibold">Home</p>
-                  </div>
-                </a>
-              </div>
-              <div class="col-6 col-md-4 col-xl-2">
-                <a class="block block-rounded block-bordered block-link-shadow ribbon ribbon-modern ribbon-primary text-center" href="javascript:void(0)">
-                  <div class="ribbon-box">2</div>
-                  <div class="block-content">
-                    <p class="my-2">
-                      <i class="fa fa-envelope-open fa-2x text-muted"></i>
-                    </p>
-                    <p class="fw-semibold">Inbox</p>
-                  </div>
-                </a>
-              </div>
-              <div class="col-6 col-md-4 col-xl-2">
-                <a class="block block-rounded block-bordered block-link-shadow ribbon ribbon-modern ribbon-success text-center" href="javascript:void(0)">
-                  <div class="ribbon-box">3</div>
-                  <div class="block-content">
-                    <p class="my-2">
-                      <i class="fa fa-briefcase fa-2x text-muted"></i>
-                    </p>
-                    <p class="fw-semibold">Projects</p>
-                  </div>
-                </a>
-              </div>
-              <div class="col-6 col-md-4 col-xl-2">
-                <a class="block block-rounded block-bordered block-link-shadow text-center" href="javascript:void(0)">
-                  <div class="block-content">
-                    <p class="my-2">
-                      <i class="fa fa-chart-pie fa-2x text-muted"></i>
-                    </p>
-                    <p class="fw-semibold">Statistics</p>
-                  </div>
-                </a>
-              </div>
-              <div class="col-6 col-md-4 col-xl-2">
-                <a class="block block-rounded block-bordered block-link-shadow ribbon ribbon-modern ribbon-primary text-center" href="javascript:void(0)">
-                  <div class="ribbon-box">24</div>
-                  <div class="block-content">
-                    <p class="my-2">
-                      <i class="fa fa-user-tie fa-2x text-muted"></i>
-                    </p>
-                    <p class="fw-semibold">People</p>
-                  </div>
-                </a>
-              </div>
-              <div class="col-6 col-md-4 col-xl-2">
-                <a class="block block-rounded block-bordered block-link-shadow text-center" href="javascript:void(0)">
-                  <div class="block-content">
-                    <p class="my-2">
-                      <i class="fa fa-file-word fa-2x text-muted"></i>
-                    </p>
-                    <p class="fw-semibold">Documents</p>
-                  </div>
-                </a>
-              </div>
-            </div> -->
-            <!-- END Quick Menu -->
-
-            <!-- Statistics -->
-            <!-- <div class="row">
-              <div class="col-md-6">
-                <div class="block block-rounded block-bordered block-mode-loading-refresh">
-                  <div class="block-header">
-                    <h3 class="block-title">Projects</h3>
-                    <div class="block-options">
-                      <button type="button" class="btn-block-option" data-toggle="block-option" data-action="state_toggle" data-action-mode="demo">
-                        <i class="fa fa-sync"></i>
-                      </button>
-                      <button type="button" class="btn-block-option">
-                        <i class="fa fa-wrench"></i>
-                      </button>
-                    </div>
-                  </div>
-                  <div class="block-content p-2"> -->
-                    <!-- Chart.js Charts are initialized in js/pages/db_corporate_slim.min.js which was auto compiled from _js/pages/db_corporate_slim.js -->
-                    <!-- For more info and examples you can check out http://www.chartjs.org/docs/ -->
-                    <!-- <canvas id="js-chartjs-corporate-slim-projects"></canvas>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-6">
-                <div class="block block-rounded block-bordered block-mode-loading-refresh">
-                  <div class="block-header">
-                    <h3 class="block-title">Tickets</h3>
-                    <div class="block-options">
-                      <button type="button" class="btn-block-option" data-toggle="block-option" data-action="state_toggle" data-action-mode="demo">
-                        <i class="fa fa-sync"></i>
-                      </button>
-                      <button type="button" class="btn-block-option">
-                        <i class="fa fa-wrench"></i>
-                      </button>
-                    </div>
-                  </div>
-                  <div class="block-content p-2"> -->
-                    <!-- Chart.js Charts are initialized in js/pages/db_corporate_slim.min.js which was auto compiled from _js/pages/db_corporate_slim.js -->
-                    <!-- For more info and examples you can check out http://www.chartjs.org/docs/ -->
-                    <!-- <canvas id="js-chartjs-corporate-slim-tickets"></canvas>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="row">
-              <div class="col-md-6 col-xl-3">
-                <a class="block block-rounded block-bordered" href="javascript:void(0)">
-                  <div class="block-content p-2">
-                    <div class="py-5 text-center bg-body-light rounded">
-                      <div class="fs-2 fw-bold mb-0">45</div>
-                      <div class="fs-sm fw-semibold text-uppercase">All Projects</div>
-                    </div>
-                  </div>
-                </a>
-              </div>
-              <div class="col-md-6 col-xl-3">
-                <a class="block block-rounded block-bordered" href="javascript:void(0)">
-                  <div class="block-content p-2">
-                    <div class="py-5 text-center bg-body-light rounded">
-                      <div class="fs-2 fw-bold mb-0">4</div>
-                      <div class="fs-sm fw-semibold text-uppercase">Pending Tasks</div>
-                    </div>
-                  </div>
-                </a>
-              </div>
-              <div class="col-md-6 col-xl-3">
-                <a class="block block-rounded block-bordered" href="javascript:void(0)">
-                  <div class="block-content p-2">
-                    <div class="py-5 text-center bg-body-light rounded">
-                      <div class="fs-2 fw-bold mb-0">19</div>
-                      <div class="fs-sm fw-semibold text-uppercase">Tickets</div>
-                    </div>
-                  </div>
-                </a>
-              </div>
-              <div class="col-md-6 col-xl-3">
-                <a class="block block-rounded block-bordered" href="javascript:void(0)">
-                  <div class="block-content p-2">
-                    <div class="py-5 text-center bg-body-light rounded">
-                      <div class="fs-2 fw-bold mb-0">2</div>
-                      <div class="fs-sm fw-semibold text-uppercase">Meetings</div>
-                    </div>
-                  </div>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div> -->
-      <!-- END all comment -->
+      </main>
       
       <!-- LeafLet ???? -->
         <div class="bg-body-extra-light">

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Sekolah;
+use App\Models\Roadmap;
 
 class GuestController extends Controller
 {
@@ -14,6 +15,13 @@ class GuestController extends Controller
 
     public function daftar_sekolah()
     {
-        # code...
+        $data = Sekolah::paginate(15);
+        return view('daftar_sekolah', compact('data'));
+    }
+
+    public function roadmap()
+    {
+        $data = Roadmap::all();
+        return view('roadmap', compact('data'));
     }
 }
