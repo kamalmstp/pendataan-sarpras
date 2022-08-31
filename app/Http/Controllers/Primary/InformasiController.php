@@ -74,7 +74,15 @@ class InformasiController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $update = Informasi::where('id_sekolah',$id)->first();
+
+        if($update->update($request->all())) {
+            Alert::success('Berhasil', 'Data Informasi Berhasil Diupdate');
+        } else {
+            Alert::error('Gagal', 'Data Informasi Gagal Diupdate');
+        }
+
+        return redirect()->back();
     }
 
     /**

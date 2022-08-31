@@ -53,7 +53,7 @@
                 </a>
             </li>
             <li class="nav-main-item">
-                <a class="nav-main-link{{ request()->is('primary/pendataan/perpus*') ? ' active' : '' }}" href="{{route('perpus.index')}}">
+                <a class="nav-main-link{{ request()->is('primary/pendataan/informasi*') ? ' active' : '' }}" href="{{route('informasi.index')}}">
                 <i class="nav-main-link-icon fa fa-book"></i>
                 <span class="nav-main-link-name">Fasilitas Sistem Online</span>
                 </a>
