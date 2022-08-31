@@ -10,7 +10,7 @@
         <div class="mb-3 text-center">
             <a class="link-fx fw-bold fs-1" href="#">
             </a>
-            <img src="{{asset('logo.png')}}" width="15%" alt="">
+            <img src="{{asset('img/header_front.png')}}" width="20%" alt="">
             <p class="text-uppercase fw-bold fs-sm text-muted">Sign In</p>
         </div>
 
@@ -50,7 +50,8 @@
     <div class="hero-static col-md-6 d-none d-md-flex align-items-md-center justify-content-md-center text-md-center">
         <div class="p-3">
         <p class="display-4 fw-bold text-white mb-3">
-            DigiPen Kotabaru
+            
+            <img src="{{asset('img/header.png')}}" width="100%" alt="">
         </p>
         <p class="fs-lg fw-semibold text-white-75 mb-0">
             Copyright &copy; <span data-toggle="year-copy"></span>

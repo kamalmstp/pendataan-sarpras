@@ -2,13 +2,14 @@
     <div class="bg-header-dark">
     <div class="content-header bg-white-5">
         <a class="fw-semibold text-white tracking-wide" href="/">
-            <img src="{{ asset('logo.png') }}" width="20%" alt="Digipen">
+            <!-- <img src="{{ asset('logo.png') }}" width="20%" alt="Digipen"> -->
+            <img src="{{ asset('img/header.png') }}" width="100%" alt="Digipen">
             <span class="smini-visible">
                 D<span class="opacity-75">P</span>
             </span>
-            <span class="smini-hidden">
+            <!-- <span class="smini-hidden">
                 Digi<span class="opacity-75">Pen</span>
-            </span>
+            </span> -->
         </a>
 
         <div>

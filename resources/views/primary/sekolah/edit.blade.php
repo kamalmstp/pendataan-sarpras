@@ -58,11 +58,7 @@
                 <div class="col-lg-8 col-xl-6">
                     <div class="mb-4">
                         <label class="form-label" for="dm-profile-edit-username">Akreditasi</label>
-                        <select name="akredetasi" class="form-control" id="akredetasi">
-                            <option value="">--Pilih Akreditasi--</option>
-                            <option value="Sudah" @if($sek->akredetasi == "Sudah") {{ 'selected' }} @endif >Sudah</option>
-                            <option value="Belum" @if($sek->akredetasi == "Belum") {{ 'selected' }} @endif >Belum</option>
-                        </select>
+                        <input type="text" id="akredetasi" name="akredetasi" class="form-control" placeholder="Akredetasi" value="{{$sek->akredetasi}}">
                     </div>
                     <div class="mb-4">
                         <label class="form-label" for="dm-profile-edit-username">Nomor Akreditasi</label>
@@ -101,14 +97,14 @@
                         <label class="form-label" for="dm-profile-edit-username">Kurikulum</label>
                         <input type="text" id="kurikulum" name="kurikulum" class="form-control" placeholder="Kurikulum" value="{{$sek->kurikulum}}">
                     </div>
-                    <div class="mb-4">
+                    <!-- <div class="mb-4">
                         <label class="form-label" for="dm-profile-edit-username">Pemanfaatan <i>E-Learning</i></label>
                         <select name="akredetasi" class="form-control" id="akredetasi">
                             <option value="">--Pilih--</option>
                             <option value="Sudah" @if($sek->akredetasi == "Sudah") {{ 'selected' }} @endif >Sudah</option>
                             <option value="Belum" @if($sek->akredetasi == "Belum") {{ 'selected' }} @endif >Belum</option>
                         </select>
-                    </div>
+                    </div> -->
                     <div class="mb-4">
                         <label class="form-label" for="dm-profile-edit-username">Penyelenggaraan</label>
                         <input type="text" id="penyelenggaraan" name="penyelenggaraan" class="form-control" placeholder="Mis: Sehari Penuh/5 hari" value="{{$sek->penyelenggaraan}}">

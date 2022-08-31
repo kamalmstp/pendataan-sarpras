@@ -8,6 +8,7 @@ use App\Http\Controllers\Primary\SanitasiController;
 use App\Http\Controllers\Primary\JumlahController;
 use App\Http\Controllers\Primary\PerpusController;
 use App\Http\Controllers\Primary\PeralatanController;
+use App\Http\Controllers\Primary\InformasiController;
 use App\Http\Controllers\HomeController;
 use App\Models\User;
 
@@ -25,6 +26,7 @@ Route::middleware('role:' . User::SD)
             Route::resource('penunjang', PenunjangController::class);
             Route::resource('sanitasi', SanitasiController::class);
             Route::resource('jumlah', JumlahController::class);
+            Route::resource('informasi', InformasiController::class);
             Route::resource('perpus', PerpusController::class);
             Route::resource('peralatan', PeralatanController::class);
         });

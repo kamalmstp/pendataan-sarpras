@@ -23,9 +23,9 @@
     <meta property="og:url" content="">
     <meta property="og:image" content="">
     <!-- Icons -->
-    <link rel="shortcut icon" href="{{ asset('favicon.png') }}">
-  <link rel="icon" sizes="192x243" type="image/png" href="{{ asset('logo192x243.png') }}">
-  <link rel="apple-touch-icon" sizes="144x182" href="{{ asset('logo144x182.png') }}">
+    <link rel="shortcut icon" href="{{ asset('img/icon.png') }}">
+  <link rel="icon" sizes="192x243" type="image/png" href="{{ asset('img/icon.png') }}">
+  <link rel="apple-touch-icon" sizes="144x182" href="{{ asset('img/icon.png') }}">
 
     <!-- Fonts and Styles -->
     @yield('css_before')

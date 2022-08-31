@@ -19,9 +19,9 @@
     <meta property="og:image" content="">
 
     <!-- Icons -->
-    <link rel="shortcut icon" href="{{asset('logo.png')}}">
-    <link rel="icon" type="image/png" sizes="192x192" href="{{asset('media/favicons/favicon-192x192.png')}}">
-    <link rel="apple-touch-icon" sizes="180x180" href="{{asset('media/favicons/apple-touch-icon-180x180.png')}}">
+    <link rel="shortcut icon" href="{{asset('img/icon.png')}}">
+    <link rel="icon" type="image/png" sizes="192x192" href="{{asset('img/icon.png')}}">
+    <link rel="apple-touch-icon" sizes="180x180" href="{{asset('img/icon.png')}}">
     <!-- END Icons -->
 
     <!-- Stylesheets -->
@@ -122,8 +122,8 @@
           <!-- Left Section -->
           <div class="d-flex align-items-center">
             <a class="fw-semibold text-dual tracking-wide" href="#">
-              <img class="img img-avatar32 img-avatar-thumb" src="{{asset('logo.png')}}" width="7%" alt="">
-              DigiPen <span class="opacity-75">Kotabaru</span>
+              <img class="img img-avatar32 img-avatar-thumb" src="{{asset('img/header.png')}}" width="50%" alt="">
+              <!-- DigiPen <span class="opacity-75">Kotabaru</span> -->
             </a>
           </div>
           <!-- END Left Section -->
@@ -149,38 +149,8 @@
                   <span class="nav-main-link-name">Tentang DigiPen</span>
                 </a>
               </li>
-              <!-- <li class="nav-main-heading">More</li>
-              <li class="nav-main-item">
-                <a class="nav-main-link nav-main-link-submenu" data-toggle="submenu" aria-haspopup="true" aria-expanded="false" href="#">
-                  <i class="nav-main-link-icon fa fa-briefcase"></i>
-                  <span class="nav-main-link-name">Projects</span>
-                </a>
-                <ul class="nav-main-submenu">
-                  <li class="nav-main-item">
-                    <a class="nav-main-link" href="">
-                      <i class="nav-main-link-icon fa fa-check"></i>
-                      <span class="nav-main-link-name">Active</span>
-                      <span class="nav-main-link-badge badge rounded-pill bg-success">3</span>
-                    </a>
-                  </li>
-                  <li class="nav-main-item">
-                    <a class="nav-main-link" href="">
-                      <i class="nav-main-link-icon fa fa-users"></i>
-                      <span class="nav-main-link-name">Colleagues</span>
-                      <span class="nav-main-link-badge badge rounded-pill bg-primary">24</span>
-                    </a>
-                  </li>
-                  <li class="nav-main-item">
-                    <a class="nav-main-link" href="">
-                      <i class="nav-main-link-icon fa fa-cog"></i>
-                      <span class="nav-main-link-name">Manage</span>
-                    </a>
-                  </li>
-                </ul>
-              </li> -->
               <li class="nav-main-item">
                   <a href="{{route('login')}}" type="button" class="btn btn-primary">
-                    <!-- <i class="fa fa-fw fa-bell"></i> -->
                     <i class="fa fa-sign-in" aria-hidden="true"></i> Login
                   </a>
               </li>
@@ -400,34 +370,34 @@
               <div class="ratio ratio-16x9">
                 <div class="carousel-inner">
                   <div class="carousel-item active">
-                    <img src="{{asset('media/photos/2ok.jpg')}}" class="d-block w-100" alt="...">
+                    <img src="{{asset('img/29493.jpg')}}" class="d-block w-100" alt="...">
                     <div class="carousel-caption d-none d-md-block">
                       <h5>First slide label</h5>
                       <p class="lead">
                         <a href="#" target="blank">
-                          <span class="abu">Some representative placeholder content for the first slide.</span>
+                          <!-- <span class="abu">Some representative placeholder content for the first slide.</span> -->
                         </a>
                       </p>
                     </div>
                   </div>
                   <div class="carousel-item">
-                    <img src="{{asset('media/photos/1ok.jpg')}}" class="d-block w-100" alt="...">
+                    <img src="{{asset('img/5712609.jpg')}}" class="d-block w-100" alt="...">
                     <div class="carousel-caption d-none d-md-block">
                       <h5>Second slide label</h5>
                       <p class="lead">
                         <a href="#" target="blank">
-                          <span class="abu">Some representative placeholder content for the first slide.</span>
+                          <!-- <span class="abu">Some representative placeholder content for the first slide.</span> -->
                         </a>
                       </p>
                     </div>
                   </div>
                   <div class="carousel-item">
-                    <img src="{{asset('media/photos/3ok.jpg')}}" class="d-block w-100" alt="...">
+                    <img src="{{asset('img/5712616.jpg')}}" class="d-block w-100" alt="...">
                     <div class="carousel-caption d-none d-md-block">
                       <h5>Third slide label</h5>
                       <p class="lead">
                         <a href="#" target="blank">
-                          <span class="abu">Some representative placeholder content for the first slide.</span>
+                          <!-- <span class="abu">Some representative placeholder content for the first slide.</span> -->
                         </a>
                       </p>
                     </div>
@@ -495,7 +465,7 @@
                     </div>
                   </div>
                   <div class="row my-4">
-                    <div class="col-md-4">
+                    <div class="col-md-6">
                       <a href="#" style="text-decoration:none;">
                         <div class="text-center">
                           <h2 class="text-primary">333</h2>
@@ -503,7 +473,7 @@
                         </div>
                       </a>
                     </div>
-                    <div class="col-md-4">
+                    <div class="col-md-6">
                       <a href="#" style="text-decoration:none;">
                         <div class="text-center">
                           <h2 class="text-primary">999</h2>
@@ -511,14 +481,14 @@
                         </div>
                       </a>
                     </div>
-                    <div class="col-md-4">
+                    <!-- <div class="col-md-4">
                       <a href="#" style="text-decoration:none;">
                         <div class="text-center">
                           <h2 class="text-primary">666</h2>
-                          <p class="text-dark">Sekolah Menengah Atas</p>
+                          <p class="text-dark"></p>
                         </div>
                       </a>
-                    </div>
+                    </div> -->
                   </div>
                 </div>
               </div>
