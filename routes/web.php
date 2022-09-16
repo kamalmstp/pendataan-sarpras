@@ -29,6 +29,7 @@ Route::view('/pages/blank', 'pages.blank');
 
 Route::get('/', [GuestController::class, 'index'])->name('/');
 Route::get('/daftar_sekolah', [GuestController::class, 'daftar_sekolah'])->name('daftar_sekolah');
+Route::get('/detail_sekolah', [GuestController::class, 'detail_sekolah'])->name('detail_sekolah');
 Route::get('/roadmap', [GuestController::class, 'roadmap'])->name('roadmap');
 Route::get('/login', [LoginController::class, 'showLoginForm'])->name('login');
 Route::post('/login', [LoginController::class, 'login'])->name('login');

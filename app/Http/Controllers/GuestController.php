@@ -19,6 +19,12 @@ class GuestController extends Controller
         return view('daftar_sekolah', compact('data'));
     }
 
+    public function detail_sekolah()
+    {
+        $data = Sekolah::paginate(15);
+        return view('detail_sekolah', compact('data'));
+    }
+
     public function roadmap()
     {
         $data = Roadmap::all();
