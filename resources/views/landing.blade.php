@@ -1,36 +1,5 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
 
-    <title>Digipen Kotabaru - Digitalisasi Pendidikan di Kotabaru</title>
-
-    <meta name="description" content="Digipen Kotabaru - Digitalisasi Pendidikan di Kotabaru">
-    <meta name="author" content="Mustapa Ahmad Kamal">
-    <meta name="robots" content="noindex, nofollow">
-
-    <!-- Open Graph Meta -->
-    <meta property="og:title" content="Digipen Kotabaru - Digitalisasi Pendidikan di Kotabaru">
-    <meta property="og:site_name" content="Dashmix">
-    <meta property="og:description" content="Digipen Kotabaru - Digitalisasi Pendidikan di Kotabaru">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="">
-    <meta property="og:image" content="">
-
-    <!-- Icons -->
-    <link rel="shortcut icon" href="{{asset('img/icon.png')}}">
-    <link rel="icon" type="image/png" sizes="192x192" href="{{asset('img/icon.png')}}">
-    <link rel="apple-touch-icon" sizes="180x180" href="{{asset('img/icon.png')}}">
-    <!-- END Icons -->
-
-    <!-- Stylesheets -->
-    <!-- Fonts and Dashmix framework -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap">
-    <link rel="stylesheet" id="css-main" href="{{asset('css/dashmix.min.css')}}">
-    <!-- <link rel="stylesheet" id="css-theme" href="{{asset('css/themes/xwork.min.css')}}"> -->
-    <!-- <link rel="stylesheet" id="css-theme" href="{{asset('css/themes/xpro.css')}}"> -->
-  </head>
+  @include('partials.frontend.header')
   <body>
     <div id="page-container" class="side-scroll page-header-fixed main-content-boxed">
       <nav id="sidebar" aria-label="Main Navigation">

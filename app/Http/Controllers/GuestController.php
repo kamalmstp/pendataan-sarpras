@@ -10,13 +10,13 @@ class GuestController extends Controller
 {
     public function index()
     {
-        return view('landing');
+        return view('master');
     }
 
-    public function daftar_sekolah()
+    public function daftarSekolah()
     {
-        $data = Sekolah::paginate(15);
-        return view('daftar_sekolah', compact('data'));
+        // $data = Sekolah::paginate(15);
+        return view('daftarSekolah');
     }
 
     public function detail_sekolah()
