@@ -25,7 +25,7 @@ use App\Http\Controllers\GuestController;
 // });
 Route::view('/pages/slick', 'pages.slick');
 Route::view('/pages/datatables', 'pages.datatables');
-Route::view('/pages/blank', 'pages.blank');
+Route::view('/frontend', 'layouts.frontend');
 
 Route::get('/', [GuestController::class, 'index'])->name('/');
 Route::get('/daftar_sekolah', [GuestController::class, 'daftar_sekolah'])->name('daftar_sekolah');
