@@ -10,7 +10,9 @@ class GuestController extends Controller
 {
     public function index()
     {
-        return view('master');
+        $data = Sekolah::groupBy('kecamatan')->get('kecamatan');
+        // dd($data);
+        return view('master', compact('data'));
     }
 
     public function daftarSekolah()

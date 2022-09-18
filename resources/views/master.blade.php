@@ -48,15 +48,18 @@
         <div class="container">
   
           <div class="row">
+
+          @foreach($data as $row)
             <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="fade-up">
               <div class="icon-box">
                 <div class="icon"><a href="{{route('/')}}"><img src="{{asset('img/iconsekolah.png')}}" class="img-fluid"></a></div>
-                <h4 class="title"><a href="">Kecamatan Sungai Durian</a></h4>
+                <h4 class="title"><a href="">Kecamatan {{$row->kecamatan}}</a></h4>
                 <p class="description">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident</p>
               </div>
             </div>
+          @endforeach
   
-            <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="fade-up" data-aos-delay="100">
+            <!-- <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="fade-up" data-aos-delay="100">
               <div class="icon-box">
                 <div class="icon"><a href=""><img src="{{asset('img/iconsekolah.png')}}" class="img-fluid"></a></div>
                 <h4 class="title"><a href="">Kecamatan Pamukan Utara</a></h4>
@@ -78,7 +81,7 @@
                 <h4 class="title"><a href="">Kecamatan Pamukan Selatan</a></h4>
                 <p class="description">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque</p>
               </div>
-            </div>
+            </div> -->
   
           </div>
   
