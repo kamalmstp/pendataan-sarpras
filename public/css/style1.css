@@ -1,0 +1,31 @@
+.hidden{
+    display: none !important;
+    visibility: hidden !important;
+}
+
+.img-logo{
+    width: 50%;
+}
+
+#student-widget-tiles > div > .text-center:hover{
+
+}
+#student-widget-tiles > div > a.text-center:disabled,
+#student-widget-tiles > div > a.text-center.disabled
+{
+    opacity: .65 !important;
+    cursor: default !important;
+}
+
+textarea{
+    resize: none !important;
+}
+
+.invalid-feedback{
+    display: block !important;
+}
+
+.dropdown-item:hover, .dropdown-item:focus {
+    color: #fff !important;
+    background-color: #0865d0 !important;
+}

@@ -28,7 +28,7 @@ Route::view('/pages/datatables', 'pages.datatables');
 Route::view('/frontend', 'layouts.frontend');
 
 Route::get('/', [GuestController::class, 'index'])->name('/');
-Route::get('/daftar_sekolah', [GuestController::class, 'daftar_sekolah'])->name('daftar_sekolah');
+Route::get('/daftarSekolah', [GuestController::class, 'daftarSekolah'])->name('daftarSekolah');
 Route::get('/detail_sekolah', [GuestController::class, 'detail_sekolah'])->name('detail_sekolah');
 Route::get('/roadmap', [GuestController::class, 'roadmap'])->name('roadmap');
 Route::get('/login', [LoginController::class, 'showLoginForm'])->name('login');
