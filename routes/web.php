@@ -31,6 +31,7 @@ Route::get('/', [GuestController::class, 'index'])->name('/');
 Route::get('/daftarSekolah', [GuestController::class, 'daftarSekolah'])->name('daftarSekolah');
 Route::get('/detail_sekolah', [GuestController::class, 'detail_sekolah'])->name('detail_sekolah');
 Route::get('/roadmap', [GuestController::class, 'roadmap'])->name('roadmap');
+Route::get('/detailBerita', [GuestController::class, 'detailBerita'])->name('detailBerita');
 Route::get('/login', [LoginController::class, 'showLoginForm'])->name('login');
 Route::post('/login', [LoginController::class, 'login'])->name('login');
 Route::post('/logout', [LoginController::class, 'logout'])->name('logout');

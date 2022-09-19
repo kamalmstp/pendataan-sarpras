@@ -59,33 +59,37 @@
             </div>
           @endforeach
   
-            <!-- <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="fade-up" data-aos-delay="100">
-              <div class="icon-box">
-                <div class="icon"><a href=""><img src="{{asset('img/iconsekolah.png')}}" class="img-fluid"></a></div>
-                <h4 class="title"><a href="">Kecamatan Pamukan Utara</a></h4>
-                <p class="description">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur</p>
-              </div>
-            </div>
-  
-            <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="fade-up" data-aos-delay="200">
-              <div class="icon-box">
-                <div class="icon"><a href=""><img src="{{asset('img/iconsekolah.png')}}" class="img-fluid"></a></div>
-                <h4 class="title"><a href="">Kecamatan Pamukan Barat</a></h4>
-                <p class="description">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
-              </div>
-            </div>
-  
-            <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="fade-up" data-aos-delay="300">
-              <div class="icon-box">
-                <div class="icon"><a href=""><img src="{{asset('img/iconsekolah.png')}}" class="img-fluid"></a></div>
-                <h4 class="title"><a href="">Kecamatan Pamukan Selatan</a></h4>
-                <p class="description">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque</p>
-              </div>
-            </div> -->
-  
           </div>
   
         </div>
       </section><!-- End Icon Boxes Section -->
+    <!-- ======= Portfoio Section ======= -->
+    <section id="portfolio" class="portfoio">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Berita</h2>
+          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+        </div>
+
+        
+        <div class="row portfolio-container">
+          @foreach($berita as $row)
+          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+            <img src="{{asset('img/iconsekolah.png')}}" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>{{$row->title}}</h4>
+              <p>App</p>
+              <a href="{{asset('img/iconsekolah.png')}}" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="App 1"><i class="bx bx-plus"></i></a>
+              <a href="{{route('detailBerita')}}" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+            </div>
+          </div>
+          @endforeach
+        </div>
+        
+
+      </div>
+    </section><!-- End Portfoio Section -->
+
 </main>
 @include('partials.frontend.footer')
