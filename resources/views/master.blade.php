@@ -76,7 +76,7 @@
         <div class="row portfolio-container">
           @foreach($berita as $row)
           <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-            <img src="{{asset('img/iconsekolah.png')}}" class="img-fluid" alt="">
+            <img src="{{url('storage/blog/'.$row->banner_image)}}" class="img-fluid" alt="">
             <div class="portfolio-info">
               <h4>{{$row->title}}</h4>
               <p>App</p>
