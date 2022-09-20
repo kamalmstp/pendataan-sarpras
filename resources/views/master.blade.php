@@ -64,7 +64,7 @@
         </div>
       </section><!-- End Icon Boxes Section -->
     <!-- ======= Portfoio Section ======= -->
-    <section id="portfolio" class="portfoio">
+    <section id="berita" class="portfoio">
       <div class="container" data-aos="fade-up">
 
         <div class="section-title">
@@ -79,8 +79,8 @@
             <img src="{{url('storage/blog/'.$row->banner_image)}}" class="img-fluid" alt="">
             <div class="portfolio-info">
               <h4>{{$row->title}}</h4>
-              <p>App</p>
-              <a href="{{asset('img/iconsekolah.png')}}" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="App 1"><i class="bx bx-plus"></i></a>
+              <p>Dipost oleh {{$row->post_by}}</p>
+              <a href="{{url('storage/blog/'.$row->banner_image)}}" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Dipost oleh {{$row->post_by}}"><i class="bx bx-plus"></i></a>
               <a href="{{route('detailBerita')}}" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
             </div>
           </div>
@@ -90,6 +90,40 @@
 
       </div>
     </section><!-- End Portfoio Section -->
+
+<!-- ======= About Us Section ======= -->
+<section id="tentang" class="about">
+  <div class="container" data-aos="fade-up">
+
+    <div class="section-title">
+      <h2>Tentang Digipen</h2>
+      <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+    </div>
+
+    <div class="row content">
+      <div class="col-lg-6">
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+          magna aliqua.
+        </p>
+        <ul>
+          <li><i class="ri-check-double-line"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat</li>
+          <li><i class="ri-check-double-line"></i> Duis aute irure dolor in reprehenderit in voluptate velit</li>
+          <li><i class="ri-check-double-line"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat</li>
+        </ul>
+      </div>
+      <div class="col-lg-6 pt-4 pt-lg-0">
+        <p>
+          Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+          velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+          culpa qui officia deserunt mollit anim id est laborum.
+        </p>
+        <a href="#" class="btn-learn-more">Learn More</a>
+      </div>
+    </div>
+
+  </div>
+</section><!-- End About Us Section -->
 
 </main>
 @include('partials.frontend.footer')
