@@ -52,7 +52,7 @@
           @foreach($data as $row)
             <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="fade-up">
               <div class="icon-box">
-                <div class="icon"><a href="{{route('detail_sekolah')}}"><img src="{{asset('img/iconsekolah.png')}}" class="img-fluid"></a></div>
+                <div class="icon"><a href="{{route('daftarSekolah')}}"><img src="{{asset('img/iconsekolah.png')}}" class="img-fluid"></a></div>
                 <h4 class="title"><a href="">Kecamatan {{$row->kecamatan}}</a></h4>
                 <p class="description">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident</p>
               </div>
