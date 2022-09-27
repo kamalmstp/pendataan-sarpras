@@ -14,67 +14,34 @@
       </div>
     </section><!-- End Breadcrumbs -->
 
-    <!-- ======= Portfolio Details Section ======= -->
-    <section id="portfolio-details" class="portfolio-details">
-      <div class="container">
-
-        <div class="row gy-4">
-
-          <div class="col-lg-8">
-            <table class="table">
-                <thead>
-                  <tr>
-                    <th scope="col">#</th>
-                    <th scope="col">First</th>
-                    <th scope="col">Last</th>
-                    <th scope="col">Handle</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <th scope="row">1</th>
-                    <td><a href="{{route('detailSekolah')}}">Detail Sekolah</a></td>
-                    <td>Otto</td>
-                    <td>@mdo</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">2</th>
-                    <td>Jacob</td>
-                    <td>Thornton</td>
-                    <td>@fat</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">3</th>
-                    <td>Larry</td>
-                    <td>the Bird</td>
-                    <td>@twitter</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">3</th>
-                    <td>Larry</td>
-                    <td>the Bird</td>
-                    <td>@twitter</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">3</th>
-                    <td>Larry</td>
-                    <td>the Bird</td>
-                    <td>@twitter</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">3</th>
-                    <td>Larry</td>
-                    <td>the Bird</td>
-                    <td>@twitter</td>
-                  </tr>
-                </tbody>
-              </table>
+    <div class="content">
+      <div class="block block-rounded">
+          <div class="block-header block-header-default">
           </div>
-
-        </div>
-
+          <div class="block-content block-content-full" style="overflow-x:auto;">
+          <table id="sekolah" class="table table-bordered table-striped table-vcenter js-dataTable-full">
+              <thead>
+              <tr align="center">
+                  <th class="text-center" style="width: 80px;">#</th>
+                  <th>NPSN</th>
+                  <th>Nama Sekolah</th>
+                  <th>Kecamatan</th>
+              </tr>
+              </thead>
+              <tbody>
+              @foreach ($dtsekolah as $item)
+              <tr>
+                <td class="text-center">{{ $loop->iteration }}</td>
+                <td>{{ $item->npsn }}</td>
+                <td>{{ $item->nama_sekolah }}</td>
+                <td>{{ $item->kecamatan }}</td>
+              </tr>
+              @endforeach
+              </tbody>
+          </table>
+          </div>
       </div>
-    </section><!-- End Portfolio Details Section -->
+  </div>
 
 </main><!-- End #main -->
 @include('partials.frontend.footer')

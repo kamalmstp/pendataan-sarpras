@@ -16,12 +16,8 @@ Route::middleware('role:' . User::SMP)
             'prefix' => 'pendataan',
         ], function () {
             Route::resource('school', SekolahController::class);
-            Route::resource('kelas', KelasController::class);
-            Route::resource('penunjang', PenunjangController::class);
-            Route::resource('sanitasi', SanitasiController::class);
             Route::resource('jumlah', JumlahController::class);
             Route::resource('informasi', InformasiController::class);
-            Route::resource('perpus', PerpusController::class);
-            Route::resource('peralatan', PeralatanController::class);
+            
         });
     });

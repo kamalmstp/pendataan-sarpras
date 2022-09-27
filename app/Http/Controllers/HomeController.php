@@ -26,7 +26,9 @@ class HomeController extends Controller
             return view('primary.dashboard', compact('kelas'));
         }
         if (auth()->user()->level === User::SMP) {
-            return view('junior.dashboard');
+            $id = auth()->user()->id_sekolah;
+            $kelas = ruang_kelas::where('id', $id)->count();
+            return view('junior.dashboard', compact('kelas'));
         }
     }
 }
