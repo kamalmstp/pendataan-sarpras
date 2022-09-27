@@ -28,7 +28,7 @@ Route::view('/pages/datatables', 'pages.datatables');
 Route::view('/frontend', 'layouts.frontend');
 
 Route::get('/', [GuestController::class, 'index'])->name('/');
-Route::get('/daftarSekolah', [GuestController::class, 'daftarSekolah'])->name('daftarSekolah');
+Route::get('/daftarSekolah/{encrypt}', [GuestController::class, 'daftarSekolah'])->name('daftarSekolah');
 Route::get('/detailSekolah', [GuestController::class, 'detailSekolah'])->name('detailSekolah');
 Route::get('/roadmap', [GuestController::class, 'roadmap'])->name('roadmap');
 Route::get('/detailBerita', [GuestController::class, 'detailBerita'])->name('detailBerita');

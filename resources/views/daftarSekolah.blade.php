@@ -14,31 +14,33 @@
       </div>
     </section><!-- End Breadcrumbs -->
 
-    <div class="content">
-      <div class="block block-rounded">
-          <div class="block-header block-header-default">
-          </div>
-          <div class="block-content block-content-full" style="overflow-x:auto;">
-          <table id="sekolah" class="table table-bordered table-striped table-vcenter js-dataTable-full">
-              <thead>
-              <tr align="center">
-                  <th class="text-center" style="width: 80px;">#</th>
-                  <th>NPSN</th>
-                  <th>Nama Sekolah</th>
-                  <th>Kecamatan</th>
-              </tr>
-              </thead>
-              <tbody>
-              @foreach ($dtsekolah as $item)
-              <tr>
-                <td class="text-center">{{ $loop->iteration }}</td>
-                <td>{{ $item->npsn }}</td>
-                <td>{{ $item->nama_sekolah }}</td>
-                <td>{{ $item->kecamatan }}</td>
-              </tr>
-              @endforeach
-              </tbody>
-          </table>
+    <!-- ======= Portfolio Details Section ======= -->
+    <section id="portfolio-details" class="portfolio-details">
+      <div class="container">
+
+        <div class="row gy-4">
+
+          <div class="col-lg-8">
+            <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">First</th>
+                    <th scope="col">Last</th>
+                    <th scope="col">Handle</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  @foreach($data as $row)
+                  <tr>
+                    <th scope="row">{{$loop->iteration}}</th>
+                    <td><a href="{{route('detailSekolah')}}">{{$row->nama_sekolah}}</a></td>
+                    <td>Otto</td>
+                    <td>@mdo</td>
+                  </tr>
+                  @endforeach
+                </tbody>
+              </table>
           </div>
       </div>
   </div>
