@@ -31,42 +31,14 @@
                   </tr>
                 </thead>
                 <tbody>
+                  @foreach($data as $row)
                   <tr>
-                    <th scope="row">1</th>
-                    <td><a href="{{route('detailSekolah')}}">Detail Sekolah</a></td>
+                    <th scope="row">{{$loop->iteration}}</th>
+                    <td><a href="{{route('detailSekolah')}}">{{$row->nama_sekolah}}</a></td>
                     <td>Otto</td>
                     <td>@mdo</td>
                   </tr>
-                  <tr>
-                    <th scope="row">2</th>
-                    <td>Jacob</td>
-                    <td>Thornton</td>
-                    <td>@fat</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">3</th>
-                    <td>Larry</td>
-                    <td>the Bird</td>
-                    <td>@twitter</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">3</th>
-                    <td>Larry</td>
-                    <td>the Bird</td>
-                    <td>@twitter</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">3</th>
-                    <td>Larry</td>
-                    <td>the Bird</td>
-                    <td>@twitter</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">3</th>
-                    <td>Larry</td>
-                    <td>the Bird</td>
-                    <td>@twitter</td>
-                  </tr>
+                  @endforeach
                 </tbody>
               </table>
           </div>

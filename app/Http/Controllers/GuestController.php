@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Crypt;
 use App\Models\Sekolah;
 use App\Models\Roadmap;
 use App\Models\Blog;
@@ -17,26 +18,27 @@ class GuestController extends Controller
         return view('master', compact(['data', 'berita']));
     }
 
-    public function berita()
-    {
-        $data = Blog::all();
-        return view('master', compact('data'));
-    }
+    // public function berita()
+    // {
+    //     $data = Blog::all();
+    //     return view('master', compact('data'));
+    // }
 
     public function detailBerita()
     {
         return view('detail-berita');
     }
 
-    public function daftarSekolah()
+    public function daftarSekolah($encrypt)
     {
-        // $data = Sekolah::paginate(15);
-        return view('daftarSekolah');
+        $decypt = Crypt::decrypt($encrypt);
+        $data = Sekolah::where('kecamatan', $decypt)->get();
+        return view('daftarSekolah', compact('data'));
     }
 
-    public function detailSekolah()
+    public function detailSekolah($id)
     {
-        // $data = Sekolah::paginate(15);
+        // $data = Sekolah::findorfail($id);
         return view('detailSekolah');
     }
 
