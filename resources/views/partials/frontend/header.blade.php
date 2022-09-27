@@ -93,7 +93,7 @@
 
     <nav id="navbar" class="navbar">
       <ul>
-        <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
+        <li><a class="nav-link scrollto active" href="{{ route('/') }}">Home</a></li>
         <li><a class="nav-link scrollto " href="#berita">Berita</a></li>
         <li><a class="nav-link scrollto " href="#tentang">Tentang</a></li>
         <li><a class="nav-link scrollto" href="{{ route('login') }}">Login</a></li>

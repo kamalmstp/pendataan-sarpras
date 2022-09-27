@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Crypt;
 use App\Models\Sekolah;
+use App\Models\Fasilitas;
 use App\Models\Roadmap;
 use App\Models\Blog;
 
@@ -38,8 +39,10 @@ class GuestController extends Controller
 
     public function detailSekolah($id)
     {
-        // $data = Sekolah::findorfail($id);
-        return view('detailSekolah');
+        $data = Sekolah::findorfail($id);
+        $fasilitas = Fasilitas::where('id_sekolah',$id)->first();
+        // dd($fasilitas);
+        return view('detailSekolah', compact(['data','fasilitas']));
     }
 
     public function roadmap()

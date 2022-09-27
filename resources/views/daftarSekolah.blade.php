@@ -25,18 +25,16 @@
                 <thead>
                   <tr>
                     <th scope="col">#</th>
-                    <th scope="col">First</th>
-                    <th scope="col">Last</th>
-                    <th scope="col">Handle</th>
+                    <th scope="col">Nama Sekolah</th>
+                    <th scope="col">Kecamatan</th>
                   </tr>
                 </thead>
                 <tbody>
                   @foreach($data as $row)
                   <tr>
                     <th scope="row">{{$loop->iteration}}</th>
-                    <td><a href="{{route('detailSekolah')}}">{{$row->nama_sekolah}}</a></td>
-                    <td>Otto</td>
-                    <td>@mdo</td>
+                    <td><a href="{{route('detailSekolah', $row->id)}}">{{$row->nama_sekolah}}</a></td>
+                    <td>{{ $row->kecamatan }}</td>
                   </tr>
                   @endforeach
                 </tbody>
