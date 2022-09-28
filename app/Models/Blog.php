@@ -11,4 +11,9 @@ class Blog extends Model
 
     protected $table = 'blog_post';
     protected $guarded = [];
+
+    public function Blog_category(Type $var = null)
+    {
+        return $this->belongsTo(Blog_category::class);
+    }
 }

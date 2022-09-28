@@ -28,10 +28,11 @@ Route::view('/pages/datatables', 'pages.datatables');
 Route::view('/frontend', 'layouts.frontend');
 
 Route::get('/', [GuestController::class, 'index'])->name('/');
-Route::get('/daftarSekolah/{encrypt}', [GuestController::class, 'daftarSekolah'])->name('daftarSekolah');
-Route::get('/detailSekolah/{id}', [GuestController::class, 'detailSekolah'])->name('detailSekolah');
+Route::get('/daftar-sekolah/{encrypt}', [GuestController::class, 'daftarSekolah'])->name('daftar-sekolah');
+Route::get('/detail-sekolah/{id}', [GuestController::class, 'detailSekolah'])->name('detail-sekolah');
 Route::get('/roadmap', [GuestController::class, 'roadmap'])->name('roadmap');
-Route::get('/detailBerita', [GuestController::class, 'detailBerita'])->name('detailBerita');
+Route::get('/daftar-berita', [GuestController::class, 'daftarBerita'])->name('daftar-berita');
+Route::get('/detail-berita/{id}', [GuestController::class, 'detailBerita'])->name('detail-berita');
 Route::get('/login', [LoginController::class, 'showLoginForm'])->name('login');
 Route::post('/login', [LoginController::class, 'login'])->name('login');
 Route::post('/logout', [LoginController::class, 'logout'])->name('logout');

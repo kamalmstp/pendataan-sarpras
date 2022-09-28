@@ -9,7 +9,7 @@
           <li><a href="{{route('/')}}">Home</a></li>
           <li>Daftar Sekolah</li>
         </ol>
-        <h2>Daftar Sekolah</h2>
+        <h2>Daftar Sekolah Kecamatan {{ $data[0]->kecamatan }}</h2>
 
       </div>
     </section><!-- End Breadcrumbs -->
@@ -26,15 +26,17 @@
                   <tr>
                     <th scope="col">#</th>
                     <th scope="col">Nama Sekolah</th>
-                    <th scope="col">Kecamatan</th>
+                    <th scope="col">NPSN</th>
+                    <th scope="col">Status</th>
                   </tr>
                 </thead>
                 <tbody>
                   @foreach($data as $row)
                   <tr>
                     <th scope="row">{{$loop->iteration}}</th>
-                    <td><a href="{{route('detailSekolah', $row->id)}}">{{$row->nama_sekolah}}</a></td>
-                    <td>{{ $row->kecamatan }}</td>
+                    <td><a href="{{route('detail-sekolah', $row->id)}}">{{$row->nama_sekolah}}</a></td>
+                    <td>{{ $row->npsn }}</td>
+                    <td>{{ $row->status }}</td>
                   </tr>
                   @endforeach
                 </tbody>

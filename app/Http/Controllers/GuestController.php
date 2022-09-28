@@ -8,26 +8,27 @@ use App\Models\Sekolah;
 use App\Models\Fasilitas;
 use App\Models\Roadmap;
 use App\Models\Blog;
+use App\Models\Blog_category;
 
 class GuestController extends Controller
 {
     public function index()
     {
         $data = Sekolah::groupBy('kecamatan')->get('kecamatan');
-        $berita = Blog::all();
-        // dd($data);
+        $berita = Blog::limit(3)->latest('post_date')->get();
         return view('master', compact(['data', 'berita']));
     }
 
-    // public function berita()
-    // {
-    //     $data = Blog::all();
-    //     return view('master', compact('data'));
-    // }
-
-    public function detailBerita()
+    public function daftarBerita()
     {
-        return view('detail-berita');
+        $data = Blog::latest()->paginate(3);
+        return view('daftarBerita', compact('data'));
+    }
+
+    public function detailBerita($id)
+    {
+        $data = Blog::join('blog_category','blog_category.id','=','blog_post.id_category')->find($id);
+        return view('detail-berita', compact('data'));
     }
 
     public function daftarSekolah($encrypt)

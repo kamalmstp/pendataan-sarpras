@@ -11,4 +11,9 @@ class Blog_category extends Model
 
     protected $table = 'blog_category';
     protected $guarded = [];
+    
+    public function Blog()
+    {
+        return $this->hasMany(Blog::class);
+    }
 }

@@ -10,7 +10,7 @@
           <li><a href="{{ url()->previous() }}">Daftar Sekolah</a></li>
           <li>Detail Sekolah</li>
         </ol>
-        <h2>Detail Sekolah</h2>
+        <h2>Detail Sekolah {{ $data->nama_sekolah }}</h2>
 
       </div>
     </section><!-- End Breadcrumbs -->

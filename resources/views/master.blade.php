@@ -52,9 +52,8 @@
           @foreach($data as $row)
             <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="fade-up">
               <div class="icon-box">
-                <div class="icon"><a href="{{route('daftarSekolah', Illuminate\Support\Facades\Crypt::encrypt($row->kecamatan))}}"><img src="{{asset('img/iconsekolah.png')}}" class="img-fluid"></a></div>
-                <h4 class="title"><a href="{{route('daftarSekolah', Illuminate\Support\Facades\Crypt::encrypt($row->kecamatan))}}">Kecamatan {{$row->kecamatan}}</a></h4>
-                <p class="description">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident</p>
+                <div class="icon"><a href="{{route('daftar-sekolah', Illuminate\Support\Facades\Crypt::encrypt($row->kecamatan))}}"><img src="{{asset('img/iconsekolah.png')}}" class="img-fluid"></a></div>
+                <h4 class="title"><a href="{{route('daftar-sekolah', Illuminate\Support\Facades\Crypt::encrypt($row->kecamatan))}}">Kecamatan {{$row->kecamatan}}</a></h4>
               </div>
             </div>
           @endforeach
@@ -76,12 +75,12 @@
         <div class="row portfolio-container">
           @foreach($berita as $row)
           <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-            <img src="{{url('storage/blog/'.$row->banner_image)}}" class="img-fluid" alt="">
+            <a href="{{ route('detail-berita',$row->id) }}"><img src="{{url('storage/blog/'.$row->banner_image)}}" class="img-fluid" alt=""></a>
             <div class="portfolio-info">
-              <h4>{{$row->title}}</h4>
+              <p>{{$row->title}}</p>
               <p>Dipost oleh {{$row->post_by}}</p>
               <a href="{{url('storage/blog/'.$row->banner_image)}}" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Dipost oleh {{$row->post_by}}"><i class="bx bx-plus"></i></a>
-              <a href="{{route('detailBerita')}}" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+              <a href="{{ route('detail-berita',$row->id) }}" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
             </div>
           </div>
           @endforeach
