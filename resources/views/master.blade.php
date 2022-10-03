@@ -7,36 +7,17 @@
       <div class="carousel-item active">
         <div class="carousel-container">
           <h2 class="animate__animated animate__fadeInDown">Selamat datang di Digipen Kotabaru</h2>
-          <p class="animate__animated animate__fadeInUp">Ut velit est quam dolor ad a aliquid qui aliquid. Sequi ea ut et est quaerat sequi nihil ut aliquam. Occaecati alias dolorem mollitia ut. Similique ea voluptatem. Esse doloremque accusamus repellendus deleniti vel. Minus et tempore modi architecto.</p>
-          <a href="#about" class="btn-get-started animate__animated animate__fadeInUp scrollto">Read More</a>
+          <p class="animate__animated animate__fadeInUp">Platform media informasi dan visualisasi bagi sekolah-sekolah di Kotabaru</p>
         </div>
       </div>
 
-      <!-- Slide 2 -->
-      <div class="carousel-item">
-        <div class="carousel-container">
-          <h2 class="animate__animated animate__fadeInDown">Lorem Ipsum Dolor</h2>
-          <p class="animate__animated animate__fadeInUp">Ut velit est quam dolor ad a aliquid qui aliquid. Sequi ea ut et est quaerat sequi nihil ut aliquam. Occaecati alias dolorem mollitia ut. Similique ea voluptatem. Esse doloremque accusamus repellendus deleniti vel. Minus et tempore modi architecto.</p>
-          <a href="#about" class="btn-get-started animate__animated animate__fadeInUp scrollto">Read More</a>
-        </div>
-      </div>
-
-      <!-- Slide 3 -->
-      <div class="carousel-item">
-        <div class="carousel-container">
-          <h2 class="animate__animated animate__fadeInDown">Sequi ea ut et est quaerat</h2>
-          <p class="animate__animated animate__fadeInUp">Ut velit est quam dolor ad a aliquid qui aliquid. Sequi ea ut et est quaerat sequi nihil ut aliquam. Occaecati alias dolorem mollitia ut. Similique ea voluptatem. Esse doloremque accusamus repellendus deleniti vel. Minus et tempore modi architecto.</p>
-          <a href="#about" class="btn-get-started animate__animated animate__fadeInUp scrollto">Read More</a>
-        </div>
-      </div>
-
-      <a class="carousel-control-prev" href="#heroCarousel" role="button" data-bs-slide="prev">
+      {{-- <a class="carousel-control-prev" href="#heroCarousel" role="button" data-bs-slide="prev">
         <span class="carousel-control-prev-icon bx bx-chevron-left" aria-hidden="true"></span>
       </a>
 
       <a class="carousel-control-next" href="#heroCarousel" role="button" data-bs-slide="next">
         <span class="carousel-control-next-icon bx bx-chevron-right" aria-hidden="true"></span>
-      </a>
+      </a> --}}
 
     </div>
   </section>
@@ -52,6 +33,7 @@
           @foreach($data as $row)
             <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="fade-up">
               <div class="icon-box">
+                <h4 class="title" style="text-align: center">Daftar Sekolah</h4>
                 <div class="icon"><a href="{{route('daftar-sekolah', Illuminate\Support\Facades\Crypt::encrypt($row->kecamatan))}}"><img src="{{asset('img/iconsekolah.png')}}" class="img-fluid"></a></div>
                 <h4 class="title"><a href="{{route('daftar-sekolah', Illuminate\Support\Facades\Crypt::encrypt($row->kecamatan))}}">Kecamatan {{$row->kecamatan}}</a></h4>
               </div>
@@ -68,7 +50,6 @@
 
         <div class="section-title">
           <h2>Berita</h2>
-          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
         </div>
 
         
@@ -96,28 +77,26 @@
 
     <div class="section-title">
       <h2>Tentang Digipen</h2>
-      <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+      <p>
+        Pengembangan digipen Kotabaru akan menjadi sebuah platform media informasi dan visualisasi bagi sekolah-sekolah. 
+        Selain itu, sistem ini juga akan menampilkan peta jalan pendidikan serta berita-berita/informasi terkait perkembangan teknologi di
+        bidang pendidikan.
+      </p>
     </div>
 
     <div class="row content">
       <div class="col-lg-6">
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-          magna aliqua.
+          Diharapkan kedepannya platform ini dapat menjadi sebuah inovasi dalam digitaliasi pendidikan seperti :
         </p>
         <ul>
-          <li><i class="ri-check-double-line"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat</li>
-          <li><i class="ri-check-double-line"></i> Duis aute irure dolor in reprehenderit in voluptate velit</li>
-          <li><i class="ri-check-double-line"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat</li>
+          <li><i class="ri-check-double-line"></i> Mengembangkan dan menerapkan sistem informasi untuk pengelolaan sekolah secara digital</li>
+          <li><i class="ri-check-double-line"></i> Mengadakan pengarahan dan pelatihan terkait penggunaan teknologi</li>
         </ul>
       </div>
       <div class="col-lg-6 pt-4 pt-lg-0">
-        <p>
-          Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-          velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-          culpa qui officia deserunt mollit anim id est laborum.
-        </p>
-        <a href="#" class="btn-learn-more">Learn More</a>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3983.403136934577!2d116.22489031472026!3d-3.249554441834845!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2def302b2ced3c85%3A0x89e9d007fad8f406!2sDinas%20Pendidikan%20dan%20Kebudayaan%20Kabupaten%20Kotabaru!5e0!3m2!1sen!2sid!4v1659279976558!5m2!1sen!2sid" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <a href="{{ route('tentang') }}" class="btn-learn-more">Selengkapnya</a>
       </div>
     </div>
 

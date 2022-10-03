@@ -46,6 +46,11 @@ class GuestController extends Controller
         return view('detailSekolah', compact(['data','fasilitas']));
     }
 
+    public function tentang()
+    {
+        return view('tentang');
+    }
+
     public function roadmap()
     {
         $data = Roadmap::all();

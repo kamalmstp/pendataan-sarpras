@@ -62,7 +62,7 @@
   <footer id="footer">
     <div class="container">
       <div class="copyright">
-        &copy; Copyright <strong><span>Anyar</span></strong>. All Rights Reserved
+         &copy; 2022 <strong>Digitalisasi Pendidikan Kabupaten Kotabaru</strong>. All Rights Reserved
       </div>
       <div class="credits">
         <!-- All the links in the footer should remain intact. -->

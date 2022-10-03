@@ -78,8 +78,8 @@
 <div id="topbar" class="fixed-top d-flex align-items-center" style="background-color: #1e74be">
   <div class="container d-flex align-items-center justify-content-center justify-content-md-between">
     <div class="contact-info d-flex align-items-center">
-      <i class="bi bi-envelope-fill"></i><a href="mailto:contact@example.com">info@example.com</a>
-      <i class="bi bi-phone-fill phone-icon"></i> +1 5589 55488 55
+      {{-- <i class="bi bi-envelope-fill"></i><a href="mailto:contact@example.com">info@example.com</a>
+      <i class="bi bi-phone-fill phone-icon"></i> +1 5589 55488 55 --}}
     </div>
   </div>
 </div>
@@ -95,7 +95,7 @@
       <ul>
         <li><a class="nav-link scrollto {{ (request()->is('/')) ? 'active' : '' }}" href="{{ route('/') }}">Home</a></li>
         <li><a class="nav-link scrollto {{ (request()->is('daftar-berita')) ? 'active' : '' }}" href="{{ route('daftar-berita') }}">Berita</a></li>
-        <li><a class="nav-link scrollto " href="#tentang">Tentang</a></li>
+        <li><a class="nav-link scrollto {{ (request()->is('tentang')) ? 'active' : '' }}" href="{{ route('tentang') }}">Tentang</a></li>
         <li><a class="nav-link scrollto" href="{{ route('login') }}">Login</a></li>
       </ul>
       <i class="bi bi-list mobile-nav-toggle"></i>

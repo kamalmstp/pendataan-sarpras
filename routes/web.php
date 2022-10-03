@@ -30,6 +30,7 @@ Route::view('/frontend', 'layouts.frontend');
 Route::get('/', [GuestController::class, 'index'])->name('/');
 Route::get('/daftar-sekolah/{encrypt}', [GuestController::class, 'daftarSekolah'])->name('daftar-sekolah');
 Route::get('/detail-sekolah/{id}', [GuestController::class, 'detailSekolah'])->name('detail-sekolah');
+Route::get('/tentang', [GuestController::class, 'tentang'])->name('tentang');
 Route::get('/roadmap', [GuestController::class, 'roadmap'])->name('roadmap');
 Route::get('/daftar-berita', [GuestController::class, 'daftarBerita'])->name('daftar-berita');
 Route::get('/detail-berita/{id}', [GuestController::class, 'detailBerita'])->name('detail-berita');
