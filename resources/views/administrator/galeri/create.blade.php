@@ -16,7 +16,7 @@
                 <div class="row push">
                     <div class="col-lg-6 col-xl-6">
                         <div class="form mb-4">
-                            <select name="id_sekolah" class="form-control" id="id_sekolah">
+                            <select name="id_sekolah" class="form-control select2" id="id_sekolah">
                                 <option value="">---Sekolah---</option>
                                 @foreach ($sekolah as $row)
                                     <option value="{{ $row->id }}">{{ $row->nama_sekolah }}</option>
@@ -50,32 +50,35 @@
 @endsection
 @section('js_after')
 <script>
-    $(function () {
-        $(document).ready(function () {
-            $('#fileUploadForm').ajaxForm({
-                beforeSend: function () {
-                    var percentage = '0';
-                },
-                uploadProgress: function (event, position, total, percentComplete) {
-                    var percentage = percentComplete;
-                    $('.progress .progress-bar').css("width", percentage+'%', function() {
-                      return $(this).attr("aria-valuenow", percentage) + "%";
-                    })
-                },
-                complete: function (xhr) {
-                    console.log('File has uploaded');
-                    Swal.fire(
-                    'Sukses!',
-                    'Upload Selesai',
-                    'success'
-                    ).then(function(){
-                        location.reload();
-                    }
-                );
+$(function () {
+    $(document).ready(function () {
+        $('#fileUploadForm').ajaxForm({
+            beforeSend: function () {
+                var percentage = '0';
+            },
+            uploadProgress: function (event, position, total, percentComplete) {
+                var percentage = percentComplete;
+                $('.progress .progress-bar').css("width", percentage+'%', function() {
+                    return $(this).attr("aria-valuenow", percentage) + "%";
+                })
+            },
+            complete: function (xhr) {
+                console.log('File has uploaded');
+                Swal.fire(
+                'Sukses!',
+                'Upload Selesai',
+                'success'
+                ).then(function(){
+                    location.reload();
                 }
-            });
+            );
+            }
         });
     });
+});
+$(document).ready(function() {
+    $('.select2').select2();
+});
 </script>
 @endsection
 

@@ -25,6 +25,7 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap">
   <link rel="stylesheet" id="css-main" href="{{ mix('css/dashmix.css') }}">
   <link rel="stylesheet" id="css-main" href="{{ asset('css/style.css') }}">
+  <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
   
 
   <!-- You can include a specific file from public/css/themes/ folder to alter the default color theme of the template. eg: -->
@@ -57,6 +58,7 @@
   <script src="{{ asset('js/confirm.js') }}"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.form/4.3.0/jquery.form.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
 
   @yield('js_after')
   @include('sweetalert::alert')
