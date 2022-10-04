@@ -55,6 +55,8 @@
   <script src="{{ mix('js/dashmix.app.js') }}"></script>
   <script src="{{ asset('js/plugins/sweetalert2/sweetalert2.min.js') }}"></script>
   <script src="{{ asset('js/confirm.js') }}"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.form/4.3.0/jquery.form.min.js"></script>
 
   @yield('js_after')
   @include('sweetalert::alert')

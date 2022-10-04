@@ -53,7 +53,8 @@ class GaleriController extends Controller
                 ]);
             }
         }
-        return back()->with('success','Added');
+        return response()->json(['success'=>'Successfully uploaded.']);
+        // return back()->with('success','Added');
     }
 
     /**
