@@ -56,6 +56,9 @@
                     <li class="nav-item" role="presentation">
                       <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact" type="button" role="tab" aria-controls="contact" aria-selected="false">Kontak</button>
                     </li>
+                    <li class="nav-item" role="presentation">
+                      <button class="nav-link" id="galeri-tab" data-bs-toggle="tab" data-bs-target="#galeri" type="button" role="tab" aria-controls="galeri" aria-selected="false">Galeri</button>
+                    </li>
                   </ul>
                   <div class="tab-content" id="myTabContent">
                     <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
@@ -127,6 +130,27 @@
                               <p class="card-text"><strong>Kecamatan : </strong>{{ $data->kecamatan }}</p>
                               <p class="card-text"><strong>Lintang : </strong>{{ $data->latitude }}</p>
                               <p class="card-text"><strong>Bujur : </strong>{{ $data->longitude }}</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="tab-pane fade" id="galeri" role="tabpanel" aria-labelledby="galeri-tab">
+                      <div class="row mt-3">
+                        <div class="col-lg-12">
+                          <div class="card bg-light mb-3">
+                            <div class="card-header">Galeri</div>
+                            <div class="card-body">
+                              <div class="portfolio-details-slider swiper">
+                                <div class="swiper-wrapper align-items-center">
+                                  @foreach ($galeri as $data)
+                                  <div class="swiper-slide">
+                                    <img class="img-fluid" src="{{url('storage/galeri/'.$data->file)}}" alt="">
+                                  </div>
+                                  @endforeach                  
+                                </div>
+                                <div class="swiper-pagination"></div>
+                              </div>
                             </div>
                           </div>
                         </div>

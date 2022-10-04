@@ -16,6 +16,12 @@
                 <span class="nav-main-link-name">Data Sekolah</span>
                 </a>
             </li>
+            <li class="nav-main-item">
+                <a class="nav-main-link{{ request()->is('administrator/pendataan/galeri*') ? ' active' : '' }}" href="{{route('galeri.create')}}">
+                <i class="nav-main-link-icon fa fa-photo-video"></i>
+                <span class="nav-main-link-name">Galeri</span>
+                </a>
+            </li>
             <li class="nav-main-heading">Website</li>
             <li class="nav-main-item">
                 <a class="nav-main-link{{ request()->is('administrator/blog*') ? ' active' : '' }}" href="{{route('blog.index')}}">

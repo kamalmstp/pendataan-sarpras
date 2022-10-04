@@ -9,6 +9,7 @@ use App\Models\Fasilitas;
 use App\Models\Roadmap;
 use App\Models\Blog;
 use App\Models\Blog_category;
+use App\Models\Galeri;
 
 class GuestController extends Controller
 {
@@ -42,8 +43,8 @@ class GuestController extends Controller
     {
         $data = Sekolah::findorfail($id);
         $fasilitas = Fasilitas::where('id_sekolah',$id)->first();
-        // dd($fasilitas);
-        return view('detailSekolah', compact(['data','fasilitas']));
+        $galeri = Galeri::With('sekolah')->where('id_sekolah',$id)->get();
+        return view('detailSekolah', compact(['data','fasilitas', 'galeri']));
     }
 
     public function tentang()
